@@ -164,7 +164,7 @@
                 <a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home" class="scrollTo">Home</a></li>
+                    <li><a href="{{url('/')}}#home" class="scrollTo">Home</a></li>
                     <li><a href="#about" class="scrollTo">About</a></li>
                     <li><a href="#work" class="scrollTo">Work</a></li>
                     <li><a href="#services" class="scrollTo">Services</a></li>
@@ -492,7 +492,7 @@
 
                         <h4>{{$post->title}}l</h4>
                         <p>{{$post->summary}}</p>
-                        <a href="blog-post.html" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+                        <a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
                     </div>
                 </div>
                 @endforeach

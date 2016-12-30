@@ -175,7 +175,7 @@
 						<a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="index-personal-full.html#home">Home</a></li>
+							<li><a href="{{url('/')}}#home">Home</a></li>
 							<li><a href="index-personal-full.html#about">About</a></li>
 							<li><a href="index-personal-full.html#work">Work</a></li>
 							<li><a href="index-personal-full.html#services">Services</a></li>

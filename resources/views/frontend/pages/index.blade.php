@@ -489,7 +489,6 @@
                         <figure class="media-preview"><!-- image -->
                             <img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/360x200/#676767:#555555/auto/" alt="img" />
                         </figure>
-
                         <h4>{{$post->title}}l</h4>
                         <p>{{$post->summary}}</p>
                         <a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>

@@ -56,7 +56,7 @@
                         </tfoot>
                         <tbody>
                         <?php $i= 0;?>
-                            @foreach($products as $product)
+                            @foreach($posts as $product)
                                 <tr class="item{{$product->id}}">
                                     <td>{{$i+=1}}</td>
                                     @if(isset($product->getMedia()[0]))
@@ -66,17 +66,17 @@
                                     @endif
                                     <td><a style="color: black" href="{{url('admin/product/detail', ['id'=>$product->id])}}">{{$product->name}}</a></td>
                                     <td>{{\App\Category::find($product->category_id)->name}}</td>
-                                    <td>{{$product->feature}}</td>
+                                    <td>{{$product->summary}}</td>
                                     <td>{!! $product->description !!}</td>
                                     <td>
                                         <select name="status" class="edit-status" id="09">
-                                            <option href="{{url('admin/product/edit-status', ['id'=>$product->id])}}" value="0" {{$product->status == 0? 'selected':''}}>Un publish</option>
-                                            <option href="{{url('admin/product/edit-status', ['id'=>$product->id])}}" value="1" {{$product->status == 1? 'selected':''}}>Live</option>
-                                            <option href="{{url('admin/product/edit-status', ['id'=>$product->id])}}" value="2" {{$product->status == 2? 'selected':''}}>Disable</option>
+                                            <option href="{{url('admin/post/edit-status', ['id'=>$product->id])}}" value="0" {{$product->status == 0? 'selected':''}}>Un publish</option>
+                                            <option href="{{url('admin/post/edit-status', ['id'=>$product->id])}}" value="1" {{$product->status == 1? 'selected':''}}>Live</option>
+                                            <option href="{{url('admin/post/edit-status', ['id'=>$product->id])}}" value="2" {{$product->status == 2? 'selected':''}}>Disable</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <a href="{{url('admin/product/edit', ['id'=>$product->id])}}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">edit</i> <span class="icon-name"></span></span></a>
+                                        <a href="{{url('admin/post/edit', ['id'=>$product->id])}}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">edit</i> <span class="icon-name"></span></span></a>
                                         <a href="#" id="{{$product->id}}" class="delete-product" product-id="{{$product->id}}" data-token="{{ csrf_token() }}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">delete_forever</i> <span class="icon-name"></span></span></a>
                                     </td>
                                 </tr>

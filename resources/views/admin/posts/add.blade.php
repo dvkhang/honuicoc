@@ -32,7 +32,7 @@
 
 
                         <div class="body">
-                            <form id="form_validation" method="POST" action="{{url('admin/product/add')}}" enctype="multipart/form-data">
+                            <form id="form_validation" method="POST" action="{{url('admin/post/add')}}" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                 <div class="row clearfix">
@@ -62,7 +62,7 @@
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" class="form-control" name="name" placeholder="template" required>
+                                                <input type="text" class="form-control" name="title" placeholder="template" required>
                                             </div>
                                         </div>
                                     </div>

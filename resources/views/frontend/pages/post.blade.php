@@ -225,7 +225,7 @@
 
 						<!-- article content -->
 						<article>
-							<p>{!! $post->summary !!}}}</p>
+							<summary>{!! $post->summary !!}</summary>
 							<p>{!! $post->description !!}}}</p>
 						</article>
 

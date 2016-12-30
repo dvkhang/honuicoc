@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('pages.template');
+//});
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index');
+Route::get('category/{id}', 'HomeController@category');
+
+Route::get('post/{id}', 'HomeController@post');

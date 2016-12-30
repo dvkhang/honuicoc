@@ -49,8 +49,8 @@ class PostController extends Controller
 
     public function postEdit(Request $request, $id){
         $update_Post = Post::where('id', $id)->update([
-            'name'=>$request->name,
-            'summary'=>$request->feature,
+            'title'=>$request->title,
+            'summary'=>$request->summary,
             'description'=>$request->description,
             'status'=>$request->status,
             'category_id'=>$request->category,
@@ -63,7 +63,7 @@ class PostController extends Controller
                 }
             }
         }
-        return Redirect::to('admin/Post/list');
+        return Redirect::to('admin/post/list');
     }
 
     public function delete(Request $request){

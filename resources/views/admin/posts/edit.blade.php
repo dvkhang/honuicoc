@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="body">
-                    <form id="form_validation" method="POST" action="{{url('admin/product/edit', ['id'=>$product->id])}}" enctype="multipart/form-data">
+                    <form id="form_validation" method="POST" action="{{url('admin/post/edit', ['id'=>$post->id])}}" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         
                         <div class="form-group form-float">
@@ -44,7 +44,7 @@
                                         <?php $categories =  \Illuminate\Support\Facades\DB::table('categories')->get();
                                         ?>
                                         @foreach($categories as $category)
-                                            <option value="{{$category->id}}" {{$category->id == $product->category->id?'selected':''}} >{{$category->name}}</option>
+                                            <option value="{{$category->id}}" {{$category->id == $post->category->id?'selected':''}} >{{$category->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -53,21 +53,21 @@
 
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <input type="text" class="form-control" name="name" value="{{$product->name}}" required>
+                                <input type="text" class="form-control" name="title" value="{{$post->title}}" required>
                                 
                             </div>
                         </div>
 
                         <div class="form-group form-float">
                             <div class="form-line">
-                                <textarea name="feature" cols="30" rows="5" class="form-control no-resize" required>{{$product->feature}}</textarea>
+                                <textarea name="summary" cols="30" rows="5" class="form-control no-resize" required>{{$post->summary}}</textarea>
                                 
                             </div>
                         </div>
 
                         <div class="form-group form-float">
                             <textarea id="ckeditor" name="description">
-                                {{$product->description}}
+                                {{$post->description}}
                             </textarea>
                         </div>
 
@@ -75,19 +75,19 @@
                             <div class="row clearfix">
                                 <div class="col-sm-5 col-lg-3">
                                     <select name="status" class="form-control form-float show-tick" id="">
-                                        <option value="0" {{$product->status == 0 ? 'selected': ''}}>Un publish </option>
-                                        <option value="1" {{$product->status == 1 ? 'selected': ''}}>Live </option>
-                                        <option value="2" {{$product->status == 2 ? 'selected': ''}}>Disable </option>
+                                        <option value="0" {{$post->status == 0 ? 'selected': ''}}>Un publish </option>
+                                        <option value="1" {{$post->status == 1 ? 'selected': ''}}>Live </option>
+                                        <option value="2" {{$post->status == 2 ? 'selected': ''}}>Disable </option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        @if(isset($product->getMedia()[0])==true)
+                        @if(isset($post->getMedia()[0])==true)
                         <div class="form-group form-float" id="media">
                             <div class="row clearfix">
                                 <div class="col-lg-12">
                                     <ul class="list-inline" >
-                                        @foreach($product->getMedia() as $image)
+                                        @foreach($post->getMedia() as $image)
                                             <li class="imgHover" >
                                                 <img src="{{asset($image->getUrl())}}" alt="" height="100" width="100" >
                                                 {{--<div class="row clearfix js-sweetalert">--}}
@@ -109,30 +109,6 @@
                         </div>
                         <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
                     </form>
-                </div>
-
-                <div class="card">
-                    <div class="header">
-                        <h2>
-                            FILE UPLOAD - DRAG & DROP OR WITH CLICK & CHOOSE
-                            <small>Taken from <a href="http://www.dropzonejs.com/" target="_blank">www.dropzonejs.com</a></small>
-                        </h2>
-
-                    </div>
-                    <div class="body">
-                        <form action="/" id="frmFileUpload" class="dropzone" method="post" enctype="multipart/form-data">
-                            <div class="dz-message">
-                                <div class="drag-icon-cph">
-                                    <i class="material-icons">touch_app</i>
-                                </div>
-                                <h3>Drop files here or click to upload.</h3>
-                                <em>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</em>
-                            </div>
-                            <div class="fallback">
-                                <input name="file" type="file" multiple />
-                            </div>
-                        </form>
-                    </div>
                 </div>
 
             </div>

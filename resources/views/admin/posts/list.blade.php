@@ -56,28 +56,28 @@
                         </tfoot>
                         <tbody>
                         <?php $i= 0;?>
-                            @foreach($posts as $product)
-                                <tr class="item{{$product->id}}">
+                            @foreach($posts as $post)
+                                <tr class="item{{$post->id}}">
                                     <td>{{$i+=1}}</td>
-                                    @if(isset($product->getMedia()[0]))
-                                    <td><img src="{{asset($product->getMedia()[0]->getUrl())}}" height="100" width="100"></td>
+                                    @if(isset($post->getMedia()[0]))
+                                    <td><img src="{{asset($post->getMedia()[0]->getUrl())}}" height="100" width="100"></td>
                                         @else
                                         <td><img src="" alt=""></td>
                                     @endif
-                                    <td><a style="color: black" href="{{url('admin/product/detail', ['id'=>$product->id])}}">{{$product->name}}</a></td>
-                                    <td>{{\App\Category::find($product->category_id)->name}}</td>
-                                    <td>{{$product->summary}}</td>
-                                    <td>{!! $product->description !!}</td>
+                                    <td><a style="color: black" href="{{url('admin/product/detail', ['id'=>$post->id])}}">{{$post->title}}</a></td>
+                                    <td>{{\App\Category::find($post->category_id)->name}}</td>
+                                    <td>{{$post->summary}}</td>
+                                    <td>{!! $post->description !!}</td>
                                     <td>
                                         <select name="status" class="edit-status" id="09">
-                                            <option href="{{url('admin/post/edit-status', ['id'=>$product->id])}}" value="0" {{$product->status == 0? 'selected':''}}>Un publish</option>
-                                            <option href="{{url('admin/post/edit-status', ['id'=>$product->id])}}" value="1" {{$product->status == 1? 'selected':''}}>Live</option>
-                                            <option href="{{url('admin/post/edit-status', ['id'=>$product->id])}}" value="2" {{$product->status == 2? 'selected':''}}>Disable</option>
+                                            <option href="{{url('admin/post/edit-status', ['id'=>$post->id])}}" value="0" {{$post->status == 0? 'selected':''}}>Un publish</option>
+                                            <option href="{{url('admin/post/edit-status', ['id'=>$post->id])}}" value="1" {{$post->status == 1? 'selected':''}}>Live</option>
+                                            <option href="{{url('admin/post/edit-status', ['id'=>$post->id])}}" value="2" {{$post->status == 2? 'selected':''}}>Disable</option>
                                         </select>
                                     </td>
                                     <td>
-                                        <a href="{{url('admin/post/edit', ['id'=>$product->id])}}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">edit</i> <span class="icon-name"></span></span></a>
-                                        <a href="#" id="{{$product->id}}" class="delete-product" product-id="{{$product->id}}" data-token="{{ csrf_token() }}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">delete_forever</i> <span class="icon-name"></span></span></a>
+                                        <a href="{{url('admin/post/edit', ['id'=>$post->id])}}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">edit</i> <span class="icon-name"></span></span></a>
+                                        <a href="#" id="{{$post->id}}" class="delete-product" product-id="{{$post->id}}" data-token="{{ csrf_token() }}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">delete_forever</i> <span class="icon-name"></span></span></a>
                                     </td>
                                 </tr>
                             @endforeach

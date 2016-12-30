@@ -31,12 +31,16 @@ class HomeController extends Controller
 
     public function category($id){
         $posts = Post::where('category_id', $id)->paginate(15);
-        return view('frontend.pages.category',compact('posts'));
+        $categories = Category::all();
+        $recent_posts = Post::orderBy('id', 'DESC')->limit(5)->get();
+        return view('frontend.pages.category',compact('posts', 'categories', 'recent_posts'));
     }
 
     public function post($id){
         $post = Post::where('id', $id)->first();
-        return view('frontend.pages.post',compact('post'));
+        $categories = Category::all();
+        $recent_posts = Post::orderBy('id', 'DESC')->limit(5)->get();
+        return view('frontend.pages.post',compact('post', 'categories','recent_posts'));
     }
 
 

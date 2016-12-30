@@ -427,17 +427,15 @@
 							<div class="clearfix"></div>
 						</div>
 
-
 						<!-- categories -->
 						<div class="widget">
 
 							<h3>Categories</h3>
 
 							<ul>
-								<li><a href="blog.html"><i class="fa fa-dot-circle-o"></i> Business</a></li>
-								<li><a href="blog.html"><i class="fa fa-dot-circle-o"></i> Audio</a></li>
-								<li><a href="blog.html"><i class="fa fa-dot-circle-o"></i> Creative</a></li>
-								<li><a href="blog.html"><i class="fa fa-dot-circle-o"></i> Funny</a></li>
+                                @foreach($categories as $category)
+								<li><a href="{{url('category', ['id'=>$category->id])}}"><i class="fa fa-dot-circle-o"></i> {{$category->name}}</a></li>
+                                @endforeach
 							</ul>
 
 						</div>
@@ -448,11 +446,9 @@
 							<h3>Recent Posts</h3>
 
 							<ul>
-								<li><a href="blog-post.html"><i class="fa fa-sign-out"></i> This is a Gallery Post</a> <small>23 June 2013 / 12:43</small></li>
-								<li><a href="blog-post.html"><i class="fa fa-sign-out"></i> Blog Post With Text Only</a> <small>23 June 2013 / 12:43</small></li>
-								<li><a href="blog-post.html"><i class="fa fa-sign-out"></i> This is an Audio Post</a> <small>23 June 2013 / 12:43</small></li>
-								<li><a href="blog-post.html"><i class="fa fa-sign-out"></i> This is a Video Post</a> <small>23 June 2013 / 12:43</small></li>
-								<li><a href="blog-post.html"><i class="fa fa-sign-out"></i> An awsome post</a> <small>23 June 2013 / 12:43</small></li>
+                                @foreach($recent_posts as $recent_post)
+								<li><a href="{{url('post', ['id'=>$recent_post->id])}}"><i class="fa fa-sign-out"></i>{{$recent_post->title}}t</a> <small>23 June 2013 / 12:43</small></li>
+								@endforeach
 							</ul>
 
 						</div>

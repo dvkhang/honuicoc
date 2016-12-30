@@ -303,41 +303,13 @@
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a href="{{asset('admin/product/list')}}">List Product</a>
+                            <a href="{{asset('admin/post/list')}}">List Product</a>
                         </li>
                         <li>
-                            <a href="{{asset('admin/product/add')}}">Add Product</a>
+                            <a href="{{asset('admin/post/add')}}">Add Product</a>
                         </li>
                     </ul>
                 </li>
-
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">swap_calls</i>
-                        <span>Addon</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="{{asset('admin/addon/list')}}">List Addon</a>
-                        </li>
-                        <li>
-                            <a href="{{asset('admin/addon/add')}}">Add Addon</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">swap_calls</i>
-                        <span>Order</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="{{asset('admin/order/list')}}">List Addon</a>
-                        </li>
-                    </ul>
-                </li>
-
             </ul>
         </div>
         <!-- #Menu -->

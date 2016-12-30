@@ -44,21 +44,21 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     });
 
-    Route::group(['prefix' => 'product'], function () {
-        Route::get('/add', 'ProductController@getAdd');
-        Route::post('/add', 'ProductController@postAdd');
+    Route::group(['prefix' => 'post'], function () {
+        Route::get('/add', 'PostController@getAdd');
+        Route::post('/add', 'PostController@postAdd');
 
-        Route::get('/list', 'ProductController@getList');
-        Route::get('/detail/{id}', 'ProductController@getDetail');
+        Route::get('/list', 'PostController@getList');
+        Route::get('/detail/{id}', 'PostController@getDetail');
 
-        Route::get('/edit/{id}', 'ProductController@getEdit');
-        Route::post('/edit/{id}', 'ProductController@postEdit');
+        Route::get('/edit/{id}', 'PostController@getEdit');
+        Route::post('/edit/{id}', 'PostController@postEdit');
 
-        Route::get('/delete', 'ProductController@delete');
+        Route::get('/delete', 'PostController@delete');
 
-        Route::get('/delete-image/{id}', 'ProductController@deleteImage');
+        Route::get('/delete-image/{id}', 'PostController@deleteImage');
 
-        Route::get('/edit-status/{id}', 'ProductController@editStatus');
+        Route::get('/edit-status/{id}', 'PostController@editStatus');
     });
 
     Route::group(['prefix' => 'addon'], function () {

@@ -199,7 +199,7 @@
 
 
 						<!-- blog item -->
-
+					@if($posts->isEmpty()==false)
 						@foreach($posts as $post)
 						<div class="item">
 
@@ -213,12 +213,16 @@
 
 							<!-- image -->
 							<figure>
-								<img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#676767:#555555/auto/" alt="img" />
-							</figure>
+		                        @if($post->getMedia()->isEmpty()==false)
+		                            <img src="{{asset($post->getMedia()[0]->getUrl())}}" class="img-responsive" data-src="{{asset($post->getMedia()[0]->getUrl())}}/820x500/#676767:#555555/auto/" alt="img" />
+		                        @else
+		                            <img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#676767:#555555/auto/" alt="img" />
+		                        @endif
+		                    </figure>
 
 							<!-- blog short preview -->
 							<p>
-								{!! $post->summary !!}}
+								{!! $post->summary !!}
 							</p>
 
 							<!-- read more button -->
@@ -226,6 +230,7 @@
 
 						</div>
 						@endforeach
+					@endif	
 						<!-- /blog item -->
 
 

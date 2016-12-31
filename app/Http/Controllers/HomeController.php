@@ -18,11 +18,18 @@ class HomeController extends Controller
     //     $this->middleware('auth');
     // }
 
+    public function dashboard()
+    {
+        return view('admin.index');
+    }
+
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
         $posts =  Post::limit(6)->get();

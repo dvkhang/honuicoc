@@ -1,4 +1,4 @@
-@extends('admin.templates.default', ['title'=>'Edit Product',
+@extends('admin.templates.default', ['title'=>'Edit Post',
             'libs_elements'=>['node-waves', 'animate', 'bootstrap-select', 'sweetalert', 'bootstrap-notify','ckeditor', 'jquery-slimscroll'],
             'customs_css'=>[
                 URL::asset('/admin/css/products/delete-image.css'),
@@ -17,7 +17,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>Edit Product</h2>
+                    <h2>Edit Post</h2>
                     <ul class="header-dropdown m-r--5">
                         <li class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -93,7 +93,7 @@
                                                 {{--<div class="row clearfix js-sweetalert">--}}
                                                     {{--<a class="btn btn-primary waves-effect delete-image" href="{{url('admin/product/delete-image', ['id'=>$image->id])}}" id="{{$image->id}}" data-id="{{$image->id}}" token="{{ csrf_token() }}" data-type="confirm">CLICK ME</a>--}}
                                                 {{--</div>--}}
-                                                <a href="{{url('admin/product/delete-image', ['id'=>$image->id])}}" id="{{$image->id}}" data-id="{{$image->id}}" class="delete-image" token="{{ csrf_token() }}" title=""><span class="glyphicon glyphicon-remove" ></span></a>
+                                                <a href="{{url('admin/post/delete-image', ['id'=>$image->id])}}" id="{{$image->id}}" data-id="{{$image->id}}" class="delete-image" token="{{ csrf_token() }}" title=""><span class="glyphicon glyphicon-remove" ></span></a>
                                             </li>
                                         @endforeach
                                     </ul>

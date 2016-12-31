@@ -276,7 +276,7 @@
             <ul class="list">
                 <li class="header">MAIN NAVIGATION</li>
                 <li class="active">
-                    <a href="index.html">
+                    <a href="{{url('admin/dashboard')}}">
                         <i class="material-icons">home</i>
                         <span>Home</span>
                     </a>
@@ -299,14 +299,14 @@
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">swap_calls</i>
-                        <span>Product</span>
+                        <span>Post</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a href="{{asset('admin/post/list')}}">List Product</a>
+                            <a href="{{asset('admin/post/list')}}">List Post</a>
                         </li>
                         <li>
-                            <a href="{{asset('admin/post/add')}}">Add Product</a>
+                            <a href="{{asset('admin/post/add')}}">Add Post</a>
                         </li>
                     </ul>
                 </li>

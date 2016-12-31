@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta property="fb:app_id" content="251181661908172" />
 		<title>IsisOne - Personal or Agency Portfolio</title>
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
@@ -61,8 +62,15 @@
 		<script type="text/javascript" src="{{asset('frontend')}}/plugins/modernizr.min.js"></script>
 	</head>
 	<body>
-
-
+	<!-- FACEBOOK -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=251181661908172";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
 		<!-- STYLESWITCHER -->
 		<div id="switcher">
@@ -210,23 +218,33 @@
 						</header>
 
 						<!-- carousel -->
-						<div class="owl-carousel text-left" data-navigation="false" data-singleitem="true" data-autoplay="true" data-transition="fade">
-							<div class="item dragCursor">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#888:#ccc/auto/" alt="img" />
+						@if($post->getMedia()->isEmpty()==false)
+							<div class="owl-carousel text-left" data-navigation="false" data-singleitem="true" data-autoplay="true" data-transition="fade">
+								@foreach($post->getMedia() as $item)
+									<div class="item dragCursor">
+										<img src="{{asset($item->getUrl())}}" class="img-responsive" data-src="{{asset($item->getUrl())}}/820x500/#888:#ccc/auto/" alt="img" />
+									</div>
+								@endforeach
 							</div>
-							<div class="item dragCursor">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#676767:#ccc/auto/" alt="img" />
+						@else
+							<div class="owl-carousel text-left" data-navigation="false" data-singleitem="true" data-autoplay="true" data-transition="fade">
+								<div class="item dragCursor">
+									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#888:#ccc/auto/" alt="img" />
+								</div>
+								<div class="item dragCursor">
+									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#676767:#ccc/auto/" alt="img" />
+								</div>
+								<div class="item dragCursor">
+									<img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#888:#ccc/auto/" alt="img" />
+								</div>
 							</div>
-							<div class="item dragCursor">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#888:#ccc/auto/" alt="img" />
-							</div>
-						</div>
+						@endif
 
 
 						<!-- article content -->
 						<article>
 							<summary>{!! $post->summary !!}</summary>
-							<p>{!! $post->description !!}}}</p>
+							<p>{!! $post->description !!}</p>
 						</article>
 
 						<div class="divider"><!-- lines divider --></div>
@@ -239,153 +257,27 @@
 							<a href="#" class="rounded-icon social fa fa-pinterest"><!-- pinterest --></a>
 							<a href="#" class="rounded-icon social fa fa-linkedin"><!-- linkedin --></a>
 						</p>
-
-						<!-- TAGS -->
-						<p class="fsize16"> Tags:
-							<a class="label label-default light" href="#"><i class="fa fa-tags"></i> Business</a> 
-							<a class="label label-default light" href="#"><i class="fa fa-tags"></i> Design</a> 
-							<a class="label label-default light" href="#"><i class="fa fa-tags"></i> Technology</a> 
-						</p>
-
 						
 						<hr /><!-- divider -->
 
-
 						<!-- COMMENTS -->
 						<div id="comments">
-							<h2>3 Comments</h2>
-
+							{{-- <h2><span class="fb-comments-count" data-href="http://localhost:8000/post/2"></span> Comments</h2> --}}
 							<!-- comment item -->
-							<div class="comment">
-
-								<!-- user-avatar -->
-								<span class="user-avatar">
-									<img class="pull-left media-object" src="{{asset('frontend')}}/images/avatar.png" width="64" height="64" alt="">
-								</span>
-
-								<div class="media-body">
-									<a href="#commentForm" class="scrollTo replyBtn">reply</a>
-									<h4 class="media-heading bold">John Doe</h4>
-									<small class="block">September 12, 2013 - 11:23</small>
-									Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-								</div>
-							</div>
-
-							<!-- comment item -->
-							<div class="comment">
-
-								<!-- user-avatar -->
-								<span class="user-avatar">
-									<img class="pull-left media-object" src="{{asset('frontend')}}/images/avatar.png" width="64" height="64" alt="">
-								</span>
-
-								<div class="media-body">
-									<a href="#commentForm" class="scrollTo replyBtn">reply</a>
-									<h4 class="media-heading bold">Diana Doe</h4>
-									<small class="block">September 12, 2013 - 11:23</small>
-									Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-								</div>
-							</div>
-
-							<!-- comment item -->
-							<div class="comment">
-
-								<!-- user-avatar -->
-								<span class="user-avatar">
-									<img class="media-object" src="{{asset('frontend')}}/images/avatar.png" width="64" height="64" alt="">
-								</span>
-
-								<div class="media-body">
-									<a href="#commentForm" class="scrollTo replyBtn">reply</a>
-									<h4 class="media-heading bold">Melissa Doe</h4>
-									<small class="block">September 12, 2013 - 11:23</small>
-									Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-
-									<!-- comment reply -->
-									<div class="media">
-
-										<!-- user-avatar -->
-										<span class="user-avatar">
-											<img class="media-object" src="{{asset('frontend')}}/images/avatar.png" width="64" height="64" alt="">
-										</span>
-
-										<div class="media-body">
-											<h4 class="media-heading bold">Peter Doe</h4>
-											<small class="block">September 12, 2013 - 11:23</small>
-											Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-										</div>
-									</div>
-
-								</div>
-							</div>
-
-							<div class="spacer"><!-- 60px spacer --></div>
-
-							<!-- COMMENT FORM -->
-							<form id="commentForm" class="form-horizontal" method="post" action="#">
-								<div class="row">
-									<!-- name -->
-									<div class="col-md-4">
-											<input required class="form-control input-lg" type="text" name="author" id="author" value="" placeholder="Name *" />
-									</div>
-
-									<!-- email -->
-									<div class="col-md-4">
-											<input required class="form-control input-lg" type="text" name="email" id="email" value="" placeholder="Email *" />
-									</div>
-
-									<!-- website -->
-									<div class="col-md-4">
-											<input class="form-control input-lg" type="text" name="url" id="url" value="" placeholder="Website" />
-									</div>
-								</div>
-
-								<div class="row">
-
-									<!-- comment -->
-									<div class="col-md-12">
-										<textarea required class="form-control input-lg" id="comment" name="comment" rows="5" placeholder="Your Comment *"></textarea>
-									</div><br />
-
-									<!-- code info -->
-									<div class="col-md-12 fsize16">
-										<p>Allowed HTML tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </p>
-										<p><small>Inappropriate and irrelevant comments will be removed at an admin's discretion.<br /> Your email is used for verification purposes only, it will never be shared.</small></p>
-									</div>
-								
-									<!-- btn -->
-									<div class="col-md-12">
-										<p>
-											<button class="btn btn-primary">Post Comment</button>
-										</p>
-									</div>
-
-									<!-- subscribe -->
-									<div class="col-md-12 fsize16">
-										<p>
-											<input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" />  
-											<label for="subscribe_comments">Notify me of follow-up comments by email.</label>
-											<br />
-											<input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" /> 
-											<label for="subscribe_blog">Notify me of new posts by email.</label>
-										</p>
-									</div>
-
-								</div>
-
-							</form>
-							<!-- /COMMENT FORM -->
-
+							{{-- FACEBOOK --}}
+							<div class="fb-comments" data-href="http://localhost:8000/post/{{$post->id}}" data-width="750" data-numposts="3"></div>
+							<div class="spacer">
+							<!-- 60px spacer --></div>
+				
 						</div><!-- /COMMENTS -->
 
 					</div>
-
 
 					<!-- SIDEBAR -->
 					<div class="right col-md-3">
 
 						<!-- blog search -->
-						<div class="widget">
+	{{-- 					<div class="widget">
 
 							<h3>Blog Search</h3>
 
@@ -397,10 +289,10 @@
 									</span>
 								</div>
 							</form>
-						</div>
+						</div> --}}
 
 						<!-- recent work -->
-						<div class="widget">
+		{{-- 				<div class="widget">
 
 							<h3>Recent Work </h3>
 
@@ -426,7 +318,7 @@
 
 							<div class="clearfix"></div>
 						</div>
-
+ --}}
 						<!-- categories -->
 						<div class="widget">
 
@@ -505,7 +397,7 @@
 		<script type="text/javascript" src="{{asset('frontend')}}/plugins/carouFredSel/jquery.carouFredSel-6.2.1-packed.js"></script>
 		<script type="text/javascript" src="{{asset('frontend')}}/plugins/jquery-countTo/jquery.countTo.js"></script>
 		<script type="text/javascript" src="{{asset('frontend')}}/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script type="text/javascript" src="{{asset('frontend')}}/plugins/holder.js"></script><!-- delete on production -->
+		<script type="text/javascript" src="{{asset('frontend')}}/plugins/holder.js"></script><!-- delete on postion -->
 
 		<!-- js scripts -->
 		<script async type="text/javascript" src="{{asset('frontend')}}/js/scripts.js"></script>

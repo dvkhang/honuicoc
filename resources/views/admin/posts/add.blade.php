@@ -1,4 +1,4 @@
-@extends('admin.templates.default', ['title'=>'Add Product',
+@extends('admin.templates.default', ['title'=>'Add Post',
             'libs_elements'=>['node-waves', 'animate', 'bootstrap-select','dropzone', 'ckeditor', 'jquery-slimscroll'],
             'customs_css'=>[],
             'custom_scripts'=>[
@@ -15,7 +15,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Add Product</h2>
+                            <h2>Add Post</h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

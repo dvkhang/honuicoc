@@ -1,4 +1,4 @@
-@extends('admin.templates.default', ['title'=>'List Product',
+@extends('admin.templates.default', ['title'=>'List Post',
             'libs_elements'=>['node-waves', 'animate','bootstrap-select','dataTables'],
             'customs_css'=>[],
             'custom_scripts'=>[
@@ -36,7 +36,7 @@
                             <th>Image</th>
                             <th>Name</th>
                             <th>Category</th>
-                            <th>Feature</th>
+                            <th>Summary</th>
                             <th>Desciption</th>
                             <th>Status</th>
                             <th width="7%">Action</th>
@@ -64,7 +64,7 @@
                                         @else
                                         <td><img src="" alt=""></td>
                                     @endif
-                                    <td><a style="color: black" href="{{url('admin/product/detail', ['id'=>$post->id])}}">{{$post->title}}</a></td>
+                                    <td>{{$post->title}}</td>
                                     <td>{{\App\Category::find($post->category_id)->name}}</td>
                                     <td>{{$post->summary}}</td>
                                     <td>{!! $post->description !!}</td>

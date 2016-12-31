@@ -11,7 +11,7 @@ $(document).ready(function() {
 		//var token = $(this).data('token');
 		$.ajax(
 			{
-				url: 'delete',
+				url: '/admin/category/delete',
 				type: 'GET',
 				dataType: 'JSON',
 				data: {

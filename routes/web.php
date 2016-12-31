@@ -61,22 +61,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::get('/edit-status/{id}', 'PostController@editStatus');
     });
 
-    Route::group(['prefix' => 'addon'], function () {
-        Route::get('/add', 'AddonController@getAdd');
-        Route::post('/add', 'AddonController@postAdd');
-
-        Route::get('/list', 'AddonController@getList');
-
-        Route::get('/edit/{id}', 'AddonController@getEdit');
-        Route::post('/edit/{id}', 'AddonController@postEdit');
-
-        Route::get('/delete', 'AddonController@delete');
-
-
-        Route::get('/edit-status/{id}', 'AddonController@editStatus');
-    });
-
-
     Route::group(['prefix' => 'order'], function () {
 
         Route::get('/list', 'OrderController@getList');

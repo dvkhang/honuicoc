@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 		$.ajax(
 			{
-				url: "/delete",
+				url: "/admin/post/delete",
 				type: 'GET',
 				dataType: "JSON",
 				data: {

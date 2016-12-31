@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Media;
 use App\Post;
-use App\PostMedia;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -48,18 +47,18 @@ class PostController extends Controller
     }
 
     public function postEdit(Request $request, $id){
-        $update_Post = Post::where('id', $id)->update([
+        $update_post = Post::where('id', $id)->update([
             'title'=>$request->title,
             'summary'=>$request->summary,
             'description'=>$request->description,
             'status'=>$request->status,
             'category_id'=>$request->category,
         ]);
-        if($update_Post ==1){
+        if($update_post ==1){
             if($request->hasFile('file')){
-                $add_Post =  Post::findOrFail($id);
+                $add_post =  Post::findOrFail($id);
                 foreach($request->file as $image){
-                    $add_Post->addMedia($image)->toMediaLibrary();
+                    $add_post->addMedia($image)->toMediaLibrary();
                 }
             }
         }
@@ -67,8 +66,8 @@ class PostController extends Controller
     }
 
     public function delete(Request $request){
-        $delete_Post = Post::find($request->id);
-        $delete_Post->delete();
+        $delete_post = Post::find($request->id);
+        $delete_post->delete();
         return response()->json();
     }
 

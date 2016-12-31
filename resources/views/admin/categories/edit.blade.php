@@ -39,16 +39,6 @@
                                         <input type="text" class="form-control" name="name" value="{{$category->name}}" required>
                                     </div>
                                 </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <select name="status" class="form-control form-float show-tick" id="">
-                                            <option value="0">Un publish </option>
-                                            <option value="1" selected>Live </option>
-                                            <option value="2">Disable </option>
-                                        </select>
-                                    </div>
-                                </div>
-
                                 <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
                             </form>
                         </div>

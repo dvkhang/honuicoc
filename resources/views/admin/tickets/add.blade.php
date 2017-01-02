@@ -1,4 +1,4 @@
-@extends('admin.templates.default', ['title'=>'Add category',
+@extends('admin.templates.default', ['title'=>'Add Ticket',
     'libs_elements'=>['node-waves', 'animate', 'bootstrap-select',  'jquery-slimscroll'],
     'customs_css'=>[],
     'custom_scripts'=>[
@@ -13,7 +13,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Add Category</h2>
+                            <h2>Add Ticket</h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -28,15 +28,28 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form id="form_validation" method="POST" action="{{url('admin/category/add')}}">
+                            <form id="form_validation" method="POST" action="{{url('admin/ticket/add')}}" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="name" required>
-                                        <label class="form-label">Category Name</label>
+                                        <input type="text" class="form-control" name="classify" required>
+                                        <label class="form-label">Tên loại vé</label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" name="price" required>
+                                        <label class="form-label">Giá Vé</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="file" name="file[]" multiple>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary waves-effect" type="submit">Thêm</button>
                             </form>
                         </div>
                     </div>

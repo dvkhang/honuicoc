@@ -32,7 +32,7 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form id="form_validation" method="POST" action="{{url('admin/ticket/edit', ['id'=>$ticket->id])}}">
+                            <form id="form_validation" method="POST" action="{{url('admin/ticket/edit', ['id'=>$ticket->id])}}" enctype="multipart/form-data">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -45,7 +45,13 @@
                                         <input type="number" class="form-control" name="price" value="{{$ticket->price}}" required>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="file" name="file[]" multiple>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary waves-effect" type="submit">Sửa</button>
                             </form>
                         </div>
                     </div>

@@ -107,7 +107,9 @@
                 @foreach($tickets as $ticket)
                     <li><!-- service 1 -->
                         <a href="#service-1" class="service yellow scrollTo">
-                            <i class="icon-globe"></i>
+                            @if($ticket->getMedia()->isEmpty()== false)
+                            <img src="{{asset($ticket->getMedia()[0]->getUrl())}}" height="120" width="120" alt="">
+                            @endif
                             <h3>{{$ticket->classify}}</h3>
                             <p>{{$ticket->price}} VNĐ</p>
                         </a>

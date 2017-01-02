@@ -18,8 +18,14 @@ class TicketController extends Controller
         $ticket =  new Ticket();
 
         $ticket->classify = $request->classify;
-        $ticket->prices = $request->prices;
+        $ticket->price = $request->price;
         $ticket->save();
+
+        if($request->hasFile('file')){
+            foreach($request->file as $image){
+                $ticket->addMedia($image)->toMediaLibrary();
+            }
+        }
         return Redirect::to('admin/ticket/list');
     }
 
@@ -36,10 +42,18 @@ class TicketController extends Controller
     }
 
     public function postEdit(Request $request,$id){
-        $ticket = Ticket::find($id);
-        $ticket->classify = $request->classify;
-        $ticket->price = $request->price;
-        $ticket->save();
+    	$ticket = Ticket::where('id', $id)->update([
+            'classify'=>$request->classify,
+            'price'=>$request->price
+        ]);
+        if($ticket ==1){
+            if($request->hasFile('file')){
+                $add_ticket =  Ticket::findOrFail($id);
+                foreach($request->file as $image){
+                    $add_ticket->addMedia($image)->toMediaLibrary();
+                }
+            }
+        }
         return Redirect::to('admin/ticket/list');
 
     }

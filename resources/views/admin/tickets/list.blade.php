@@ -34,7 +34,8 @@
                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                 <thead>
                                 <tr>
-                                    <th>loại vé</th>
+                                    <th>Icon</th>
+                                    <th>Loại vé</th>
                                     <th>Giá vé (VNĐ)</th>
                                     <th>Ngày tạo</th>
                                     <th>Tùy Chọn</th>
@@ -43,7 +44,8 @@
 
                                 <tfoot>
                                 <tr>
-                                    <th>loại vé</th>
+                                    <th>Icon</th>
+                                    <th>Loại vé</th>
                                     <th>Giá vé (VNĐ)</th>
                                     <th>Ngày tạo</th>
                                     <th>Tùy Chọn</th>
@@ -55,6 +57,9 @@
                                    
                                 @foreach($tickets as $ticket)
                                         <tr>
+                                            @if($ticket->getMedia()->isEmpty()== false)
+                                            <td><img src="{{asset($ticket->getMedia()[0]->getUrl())}}" height="120px" width="120px" alt=""></td>
+                                            @endif
                                             <td>{{$ticket->classify}}</td>
                                             <td>{{$ticket->price}} </td>
                                             <td>{{$ticket->updated_at}}</td>
@@ -65,11 +70,8 @@
                                                 <a href="#" id="{{$ticket->id}}" class="delete-ticket" ticket-id="{{$ticket->id}}" data-token="{{ csrf_token() }}">
                                                     <button type="button" class="btn btn-primary btn-lg">Xóa</button>
                                                 </a>
-                                                
                                             </td>
-                                            
                                         </tr>
-                                    
                                 @endforeach
                                 
                                 </tbody>

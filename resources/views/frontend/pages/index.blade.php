@@ -100,7 +100,6 @@
         -->
         <span class="overlay gray"></span>
 
-
         <div class="container text-center">
 
             <ul class="services animate_from_bottom">
@@ -116,8 +115,6 @@
                     </li>
                 @endforeach    
             </ul>
-
-           
         </div>
     </div>
 </section>

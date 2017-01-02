@@ -126,8 +126,8 @@
     <div class="container">
 
         <header class="text-center">
-            <h1>BLOG</h1>
-            <p>RECENT ENTRIES</p>
+            <h1>Bài đăng</h1>
+            <p>Bài viết gần đây</p>
         </header>
 
         <div class="divider"><!-- lines divider --></div>
@@ -137,18 +137,18 @@
 
                 <!-- article -->
                 @if($posts->isEmpty()== false)
-                @foreach($posts as $post)
-                <div class="col-md-4 quick-hover">
-                    <div class="quick-item">
-                        <figure class="media-preview"><!-- image -->
-                            <img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/360x200/#676767:#555555/auto/" alt="img" />
-                        </figure>
-                        <h4>{{$post->title}}l</h4>
-                        <p>{{$post->summary}}</p>
-                        <a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+                    @foreach($posts as $post)
+                    <div class="col-md-4 quick-hover">
+                        <div class="quick-item">
+                            <figure class="media-preview"><!-- image -->
+                                <img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/360x200/#676767:#555555/auto/" alt="img" />
+                            </figure>
+                            <h4>{{$post->title}}l</h4>
+                            <p>{{$post->summary}}</p>
+                            <a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+                        </div>
                     </div>
-                </div>
-                @endforeach
+                    @endforeach
                 @endif
             </div>
         </article>
@@ -242,7 +242,7 @@
 <section id="googleMap" class="noindicator nomargin nopadding">
     <div class="container">
         <address class="animate_fade_in">
-            <strong class="font-dosis fsize20">LET'S GET IN TOUCH</strong>
+            <strong class="font-dosis fsize20">Địa chỉ liên hệ</strong>
             <ul>
                 <li class="address-sprite address">
                     Tên cơ quan: Ban quản lý khu du lịch vùng Hồ Núi Cốc<br />
@@ -251,7 +251,6 @@
                 </li>
                 <li class="address-sprite phone">
                     Điện thoại văn thư: 0280.3825.868 <br/>
-
                 </li>
                 <li class="address-sprite email">
                     toanpd@thainguyen.gov.vn

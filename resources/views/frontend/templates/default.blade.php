@@ -165,13 +165,12 @@
 						<a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="{{url('/')}}#home" class="scrollTo">Home</a></li>
-							<li><a href="#work" class="scrollTo">Work</a></li>
-							<li><a href="#services" class="scrollTo">Services</a></li>
-							<li><a href="{{url('/post')}}">Blog</a></li>
-							<li><a href="#about" class="scrollTo">About</a></li>
+							<li><a href="{{url('/')}}#home" class="scrollTo">Trang chủ</a></li>
+							<li><a href="#work" class="scrollTo">Giới thiệu</a></li>
+							<li><a href="#services" class="scrollTo">Giá Vé</a></li>
+							<li><a href="#quick-blog">Bài Viết</a></li>
+							<li><a href="#about" class="scrollTo">Liên Hệ</a></li>
 							<li><a href="faq.html">FAQ</a></li>
-							<li><a href="#contact" class="scrollTo">Contact</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 

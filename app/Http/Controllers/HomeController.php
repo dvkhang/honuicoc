@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Post;
+use App\Ticket;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,8 +33,9 @@ class HomeController extends Controller
 
     public function index()
     {
+        $tickets =  Ticket::all();
         $posts =  Post::orderBy('id', 'DESC')->limit(6)->get();
-        return view('frontend.pages.index', compact('posts'));
+        return view('frontend.pages.index', compact('posts', 'tickets'));
     }
 
     public function category($id){
@@ -48,6 +50,16 @@ class HomeController extends Controller
         $categories = Category::all();
         $recent_posts = Post::orderBy('id', 'DESC')->limit(5)->get();
         return view('frontend.pages.post',compact('post', 'categories','recent_posts'));
+    }
+
+    public function allPost()
+    {
+        # code...
+        $posts =  Post::paginate(10);
+        $categories = Category::all();
+        $recent_posts = Post::orderBy('id', 'DESC')->limit(5)->get();
+        return view('frontend.pages.all_post',compact('posts', 'categories', 'recent_posts'));
+
     }
 
 

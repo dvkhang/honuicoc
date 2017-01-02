@@ -22,7 +22,7 @@ Route::get('category/{id}', 'HomeController@category');
 
 Route::get('post/{id}', 'HomeController@post');
 
-
+Route::get('post', 'HomeController@allPost');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
@@ -61,9 +61,19 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::get('/edit-status/{id}', 'PostController@editStatus');
     });
 
-    Route::group(['prefix' => 'order'], function () {
 
-        Route::get('/list', 'OrderController@getList');
+    Route::group(['prefix' => 'ticket'], function () {
+        Route::get('/add', 'TicketController@getAdd');
+        Route::post('/add', 'TicketController@postAdd');
+
+        Route::get('/list', 'TicketController@getList');
+
+        Route::get('/edit/{id}', 'TicketController@getEdit');
+        Route::post('/edit/{id}', 'TicketController@postEdit');
+
+        Route::get('/delete', 'TicketController@getDelete');
+
+
     });
 
     Route::group(['prefix' => 'user'], function () {

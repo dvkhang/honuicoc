@@ -278,20 +278,20 @@
                 <li class="active">
                     <a href="{{url('admin/dashboard')}}">
                         <i class="material-icons">home</i>
-                        <span>Home</span>
+                        <span>Trang quản lý</span>
                     </a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">swap_calls</i>
-                        <span>Category</span>
+                        <span>Thể loại</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a href="{{asset('admin/category/list')}}">List Category</a>
+                            <a href="{{asset('admin/category/list')}}">Danh sách thể loại</a>
                         </li>
                         <li>
-                            <a href="{{asset('admin/category/add')}}">Add Category</a>
+                            <a href="{{asset('admin/category/add')}}">Thêm thể loại</a>
                         </li>
                     </ul>
                 </li>
@@ -299,14 +299,29 @@
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">swap_calls</i>
-                        <span>Post</span>
+                        <span>Bài đăng</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a href="{{asset('admin/post/list')}}">List Post</a>
+                            <a href="{{asset('admin/post/list')}}">Danh sách bài đăng</a>
                         </li>
                         <li>
-                            <a href="{{asset('admin/post/add')}}">Add Post</a>
+                            <a href="{{asset('admin/post/add')}}">Thêm bài đăng</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">swap_calls</i>
+                        <span>Giá Vé</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="{{asset('admin/ticket/list')}}">Danh sách loại vé</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('admin/ticket/add')}}">Thêm Loại Vé</a>
                         </li>
                     </ul>
                 </li>

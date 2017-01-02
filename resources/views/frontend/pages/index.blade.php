@@ -1,24 +1,19 @@
 @extends('frontend.templates.default')
 @section('content')
 
-
-
-
-
-
-
 <!-- WORK -->
 <section id="work" class="alternate arrow-down">
     <div class="container">
         <header class="text-center">
-            <h1>OUR WORK</h1>
+            <h1>Chào mừng tới Hồ Núi Cốc</h1>
         </header>
 
         <div class="divider"><!-- lines divider --></div>
 
         <article>
+            <center><b><h4>Nơi tìm kiếm niềm vui trọn vẹn</h4></b></center>
             <p>
-                Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank. Andouille tongue corned beef rump pork loin shank meatball capicola turducken venison shankle kevin pancetta tri-tip boudin. Bacon ipsum dolor sit amet meatball shank pork chop capicola fatback pork loin sirloin flank.
+                Hồ Núi Cốc là một hồ nước nhân tạo được, đây là địa điểm được nhiều du khách lựa chọn cho kỳ nghĩ cuối tuần, hoặc những chuyến dã ngoại trong ngày. Hồ Núi Côc còn gắn liền với truyền thuyết về Chàng Cốc và nàng Công. Với cảnh quan thiên thiên hết sức tuyệt đẹp Hồ Núi Cốc được ví như một ”Hạ Long” thu nhỏ của Thái Nguyên.
             </p>
         </article>
 
@@ -44,7 +39,7 @@
                             <img src="{{asset('frontend')}}/images/preview/content/portfolio/p1.jpg" class="img-responsive" alt="img" />
                             <div class="caption">
                                 <i class="rounded fa fa-camera"></i>
-                                <h3>PROJECT TITLE</h3>
+                                <h3>Văn Hóa</h3>
                                 <p>Image Popup</p>
                             </div>
                         </a>
@@ -55,7 +50,7 @@
                             <img src="{{asset('frontend')}}/images/preview/content/portfolio/p2.jpg" class="img-responsive" alt="img" />
                             <div class="caption">
                                 <i class="rounded fa fa-film"></i>
-                                <h3>PROJECT TITLE</h3>
+                                <h3>Sinh Thái</h3>
                                 <p>Youtube Video</p>
                             </div>
                         </a>
@@ -66,41 +61,8 @@
                             <img src="{{asset('frontend')}}/images/preview/content/portfolio/p3.jpg" class="img-responsive" alt="img" />
                             <div class="caption">
                                 <i class="rounded fa fa-film"></i>
-                                <h3>PROJECT TITLE</h3>
+                                <h3>Giải Trí</h3>
                                 <p>Vimeo Video</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="isotope-item col-sm-6 col-md-4 brand"><!-- item -->
-                        <a class="external ajax-project" href="project-external-1.html">
-                            <img src="{{asset('frontend')}}/images/preview/content/portfolio/p4.jpg" class="img-responsive" alt="img" />
-                            <div class="caption">
-                                <i class="rounded fa fa-link"></i>
-                                <h3>PROJECT TITLE</h3>
-                                <p>External Project 1</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="isotope-item col-sm-6 col-md-4 brand"><!-- item -->
-                        <a class="external ajax-project" href="project-external-2.html">
-                            <img src="{{asset('frontend')}}/images/preview/content/portfolio/p5.jpg" class="img-responsive" alt="img" />
-                            <div class="caption">
-                                <i class="rounded fa fa-link"></i>
-                                <h3>PROJECT TITLE</h3>
-                                <p>External Project 2</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="isotope-item col-sm-6 col-md-4 brand"><!-- item -->
-                        <a class="external ajax-project" href="project-external-3.html">
-                            <img src="{{asset('frontend')}}/images/preview/content/portfolio/p6.jpg" class="img-responsive" alt="img" />
-                            <div class="caption">
-                                <i class="rounded fa fa-link"></i>
-                                <h3>PROJECT TITLE</h3>
-                                <p>External Project 3</p>
                             </div>
                         </a>
                     </li>
@@ -114,30 +76,12 @@
 </section>
 <!-- /WORK -->
 
-<!-- CALL NOW -->
-<section class="util-row">
-    <div class="container text-center">
-
-        <header data-animation="bounceIn">
-            <h1 class="no-text-transform italic">Only one step to work together</h1>
-        </header>
-
-        <article class="text-center">
-            <h2>1-800-555-12345</h2>
-            <p>CALL ME NOW - or - <a href="#contact" class="scrollTo">MESSAGE ME</a></p>
-        </article>
-
-    </div>
-</section>
-<!-- CALL NOW -->
-
-
 
 <!-- SERVICES -->
 <section id="services">
 
     <header class="text-center">
-        <h1>SERVICES</h1>
+        <h1>GIÁ VÉ</h1>
     </header>
 
     <div class="divider"><!-- lines divider --></div>
@@ -160,132 +104,22 @@
         <div class="container text-center">
 
             <ul class="services animate_from_bottom">
-                <li><!-- service 1 -->
-                    <a href="#service-1" class="service yellow scrollTo">
-                        <i class="icon-globe"></i>
-                        <h3>Corporate Identity</h3>
-                    </a>
-                </li>
-
-                <li><!-- service 2 -->
-                    <a href="#service-2" class="service orange scrollTo">
-                        <i class="icon-eye"></i>
-                        <h3>Graphic Design</h3>
-                    </a>
-                </li>
-
-                <li><!-- service 3 -->
-                    <a href="#service-3" class="service mauve scrollTo">
-                        <i class="fa fa-code"></i>
-                        <h3>Development</h3>
-                    </a>
-                </li>
-
-                <li><!-- service 4 -->
-                    <a href="#service-4" class="service green scrollTo">
-                        <i class="icon-videocam"></i>
-                        <h3>Video</h3>
-                    </a>
-                </li>
-
-                <li><!-- service default -->
-                    <a href="#service-4" class="service scrollTo">
-                        <i class="fa fa-smile-o"></i>
-                        <h3>Default</h3>
-                    </a>
-                </li>
+                @foreach($tickets as $ticket)
+                    <li><!-- service 1 -->
+                        <a href="#service-1" class="service yellow scrollTo">
+                            <i class="icon-globe"></i>
+                            <h3>{{$ticket->classify}}</h3>
+                            <p>{{$ticket->price}} VNĐ</p>
+                        </a>
+                    </li>
+                @endforeach    
             </ul>
 
-            <div class="services-nav">
-                <a id="service-prev" href="#"><i class="fa fa-chevron-left"></i></a>
-                <a id="service-next" href="#"><i class="fa fa-chevron-right"></i></a>
-            </div>
-
+           
         </div>
     </div>
-
-
-    <!--
-        BOOTSTRAP GRID USED
-        http://getbootstrap.com/css/#grid
-    -->
-
-
-
 </section>
 <!-- SERVICES -->
-
-
-
-<!-- OUR PROCESS -->
-<section id="process" class="alternate arrow-down">
-    <div class="container">
-
-        <header class="text-center animate_fade_in">
-            <h1>Our Process</h1>
-            <p>WE FIND SIMPLE SOLUTIONS TO COMPLEX PROBLEMS</p>
-        </header>
-
-        <div class="divider"><!-- lines divider --></div>
-
-        <article class="animate_fade_in">
-
-            <!-- Nav tabs [steps style] -->
-            <div class="text-center">
-                <ul class="nav nav-tabs bstrap-tabs">
-                    <li class="active"><a href="#step1" data-toggle="tab"><i class="icon-calendar"></i>ANALYSIS</a></li>
-                    <li><a href="#step2" data-toggle="tab"><i class="icon-pencil"></i>PLANNING</a></li>
-                    <li><a href="#step3" data-toggle="tab"><i class="icon-beaker"></i>DEVELOPMENT</a></li>
-                    <li><a href="#step4" data-toggle="tab"><i class="icon-thumbs-up"></i>DELIVERY</a></li>
-                </ul>
-            </div>
-
-            <!-- Tab panes [steps style] -->
-            <div class="tab-content bstrap-tabs">
-
-                <!-- STEP 1 -->
-                <div class="tab-pane fade in active" id="step1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. </p>
-                    <p>Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. </p>
-                    <p>Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin. </p>
-                </div>
-
-                <!-- STEP 2 -->
-                <div class="tab-pane fade" id="step2">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.  Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. </p>
-                    <p>Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. </p>
-                    <p>Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin.</p>
-                </div>
-
-                <!-- STEP 3 -->
-                <div class="tab-pane fade" id="step3">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. </p>
-                    <p>Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla. </p>
-                    <p>Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin.</p>
-                </div>
-
-                <!-- STEP 4 -->
-                <div class="tab-pane fade" id="step4">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.  Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus. Nunc non mollis nulla.  Sed consectetur elit id mi consectetur bibendum. Ut enim massa, sodales tempor convallis et, iaculis ac massa. Etiam suscipit nisl eget lorem pellentesque quis iaculis mi mattis. Aliquam sit amet purus lectus. Maecenas tempor ornare sollicitudin. </p>
-                </div>
-            </div>
-
-        </article>
-    </div>
-</section>
-<!-- /OUR PROCESS -->
-
-
-
-<!-- QUOTE -->
-<section class="cover" style="background-image:url('assets/images/preview/slider/clouds.jpg')">
-    <span class="overlay"></span>
-    <div class="container text-center" data-animation="bounceIn">
-        <q>We can't solve problems by using the same kind of thinking we used when we created them.</q>
-        <cite>Albert Einstein</cite>
-    </div>
-</section>
-<!-- /QUOTE -->
 
 
 <!-- BLOG -->
@@ -330,57 +164,77 @@
 </section>
 <!-- /BLOG -->
 
+<!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <header class="text-center">
+                    <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
+                </header>
+
+                <div class="divider"><!-- lines divider --></div>
+
+                <article class="text-center big-paragraph">
+                    <p>BAN QUẢN LÝ KHU DU LỊCH VÙNG HỒ NÚI CỐC</p>
+                </article>
+                <article>
+                    <div class="row text-left">
+
+                        <!-- Passion -->
+                        <div class="col-md-4">
+                            <h3>Phạm Đức Toàn</h3>
+                            <p>Trưởng ban</p>
+                            <P>ĐTDĐ: 0912.477.999</P>
+                            <P>
+                                ĐTCQ: 0280.3825.782
+                            </P>
+                            <P>
+                                Email: toanpd@thainguyen.gov.vn
+                            </P>
+                        </div>
 
 
-<!-- CONTACT -->
-<section id="contact">
-    <div class="container">
-        <header class="text-center">
-            <h1>CONTACT</h1>
-        </header>
+                        <!-- Precision -->
+                        <div class="col-md-4">
+                            <h3>Nguyễn Văn Chiến</h3>
+                            <p>Trưởng phòng HC - TH</p>
+                            <P>ĐTDĐ: 0913.386.107</P>
+                            <P>
+                                ĐTCQ: 0280.3825.868
+                            </P>
+                            <P>
+                                Email:  chiennv.bqlhnc.@gmail.com
+                            </P>
+                        </div>
 
-        <div class="divider"><!-- lines divider --></div>
 
-        <article>
-            <p class="text-center big-paragraph">
-                Drop us a line or just say <strong><em>Hello!</em></strong>
-                <small class="fsize15 block">
-                    Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. <br />
-                    Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.
-                </small>
-            </p>
-        </article>
+                        <!-- Precision -->
+                        <div class="col-md-4">
+                            <h3>Nguyễn Thị Thanh Tâm: </h3>
+                            <p>Trưởng phòng KH - NVDL</p>
+                            <P>ĐTDĐ: 0915.176.777</P>
+                            <P>
+                                ĐTCQ: 0280.3825.868
+                            </P>
+                            <P>
+                                Email:   lamnguyenthe.tn@gmail.com
+                            </P>
+                        </div>
 
-        <article>
-
-            <!-- Alert -->
-            <div id="_sent_ok_" class="alert alert-success fade in fsize16 hide">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <span id="_msg_txt_"><strong>Thank You!</strong> Your message successfully sent!</span>
-            </div>
-
-            <!-- Form -->
-            <form id="contactForm" method="post" action="php/contact.php" class="white block form-inline">
-                <div class="row">
-                    <div class="col-md-4"><input required class="fullwidth" type="text" name="contact_name" id="contact_name" value="" placeholder="NAME *" title="Name" /></div>
-                    <div class="col-md-4"><input required class="fullwidth" type="email" name="contact_email" id="contact_email" value="" placeholder="EMAIL *" title="Email" /></div>
-                    <div class="col-md-4"><input class="fullwidth" type="text" name="contact_subject" id="contact_subject" value="" placeholder="SUBJECT" title="subject" /></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12"><textarea required class="fullwidth" rows="5" name="contact_comment" id="contact_comment" placeholder="MESSAGE *"></textarea></div>
-                    <div class="col-md-12">
-                        <input type="hidden" name="captcha" id="captcha" value="" /><!-- hidden field - humans should not see it, only spam bots will see it -->
-                        <button id="contact_submit" class="btn btn-default">SEND MESSAGE</button>
                     </div>
-                </div>
-            </form>
+                </article>
 
-        </article>
+                <!-- curriculum vitae button  -->
+                <!--
+                    <article class="curriculum-vitae text-center">
+                        <a href="#" class="plusNav">+</a> 
+                        <p>curriculum vitae</p>
+                    </article>
+                -->
 
-    </div>
-</section>
-<!-- /CONTACT -->
+            </div>
+        </section>
+        <!-- /ABOUT -->
+
 
 
 
@@ -392,16 +246,16 @@
             <strong class="font-dosis fsize20">LET'S GET IN TOUCH</strong>
             <ul>
                 <li class="address-sprite address">
-                    Melbourne<br />
-                    PO Box 21132<br />
-                    Here Weare St, Melbourne<br />
-                    Vivas 2355 Australia<br />
+                    Tên cơ quan: Ban quản lý khu du lịch vùng Hồ Núi Cốc<br />
+                    Địa chỉ: Tân Thái - Đại Từ - Thái Nguyên<br />
+                    <br />
                 </li>
                 <li class="address-sprite phone">
-                    Phone: 1-800-565-2390
+                    Điện thoại văn thư: 0280.3825.868 <br/>
+
                 </li>
                 <li class="address-sprite email">
-                    support@yourname.com
+                    toanpd@thainguyen.gov.vn
                 </li>
             </ul>
         </address>

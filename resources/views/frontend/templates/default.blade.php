@@ -166,10 +166,10 @@
 
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="{{url('/')}}#home" class="scrollTo">Home</a></li>
-							<li><a href="#about" class="scrollTo">About</a></li>
 							<li><a href="#work" class="scrollTo">Work</a></li>
 							<li><a href="#services" class="scrollTo">Services</a></li>
-							<li><a href="blog.html">Blog</a></li>
+							<li><a href="{{url('/post')}}">Blog</a></li>
+							<li><a href="#about" class="scrollTo">About</a></li>
 							<li><a href="faq.html">FAQ</a></li>
 							<li><a href="#contact" class="scrollTo">Contact</a></li>
 						</ul>

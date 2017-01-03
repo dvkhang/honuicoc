@@ -1,4 +1,4 @@
-@extends('frontend.templates.default')
+@extends('frontend.templates.default-post')
 @section('content')
 
 		<!-- BLOG -->
@@ -66,7 +66,7 @@
 							{{-- <h2><span class="fb-comments-count" data-href="http://localhost:8000/post/2"></span> Comments</h2> --}}
 							<!-- comment item -->
 							{{-- FACEBOOK --}}
-							<div class="fb-comments" data-href="http://localhost:8000/post/{{$post->id}}" data-width="750" data-numposts="3"></div>
+							<div class="fb-comments" data-href="http://localhost/honuicoc/public/post/{{$post->id}}" data-width="750" data-numposts="3"></div>
 							<div class="spacer">
 							<!-- 60px spacer --></div>
 				

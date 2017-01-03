@@ -62,7 +62,17 @@
 	</head>
 	<body>
 
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=251181661908172";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
+
+	
 		<!-- HOME -->
 		<section id="home" class="half-screen"><!-- full-screen or half-screen (550px height) -->
 
@@ -142,7 +152,7 @@
 
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
-						<a class="navbar_brand scrollTo" href="{{url('/')}}">
+						<a class="navbar_brand" href="{{url('/')}}">
 							<img src="{{asset('frontend')}}/images/logo/100x100/white.png" alt="" width="50" height="50" /> 
 							<!--
 								Span class:
@@ -165,11 +175,11 @@
 						<a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="{{url('/')}}" class="scrollTo">Trang chủ</a></li>
-							<li><a href="#work" class="scrollTo">Giới thiệu</a></li>
-							<li><a href="#services" class="scrollTo">Giá Vé</a></li>
+							<li><a href="{{url('/')}}#home" >Trang chủ</a></li>
+							<li><a href="{{url('/')}}#work" >Giới thiệu</a></li>
+							<li><a href="{{url('/')}}#services" >Giá Vé</a></li>
 							<li><a href="{{url('post')}}">Bài Viết</a></li>
-							<li><a href="#about" class="scrollTo">Liên Hệ</a></li>
+							<li><a href="{{url('/')}}#about" >Liên Hệ</a></li>
 							<li><a href="faq.html">FAQ</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->

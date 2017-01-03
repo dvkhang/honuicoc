@@ -164,75 +164,75 @@
 <!-- /BLOG -->
 
 <!-- ABOUT -->
-        <section id="about">
-            <div class="container">
-                <header class="text-center">
-                    <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
-                </header>
+<section id="about">
+    <div class="container">
+        <header class="text-center">
+            <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
+        </header>
 
-                <div class="divider"><!-- lines divider --></div>
+        <div class="divider"><!-- lines divider --></div>
 
-                <article class="text-center big-paragraph">
-                    <p>BAN QUẢN LÝ KHU DU LỊCH VÙNG HỒ NÚI CỐC</p>
-                </article>
-                <article>
-                    <div class="row text-left">
+        <article class="text-center big-paragraph">
+            <p>BAN QUẢN LÝ KHU DU LỊCH VÙNG HỒ NÚI CỐC</p>
+        </article>
+        <article>
+            <div class="row text-left">
 
-                        <!-- Passion -->
-                        <div class="col-md-4">
-                            <h3>Phạm Đức Toàn</h3>
-                            <p>Trưởng ban</p>
-                            <P>ĐTDĐ: 0912.477.999</P>
-                            <P>
-                                ĐTCQ: 0280.3825.782
-                            </P>
-                            <P>
-                                Email: toanpd@thainguyen.gov.vn
-                            </P>
-                        </div>
-
-
-                        <!-- Precision -->
-                        <div class="col-md-4">
-                            <h3>Nguyễn Văn Chiến</h3>
-                            <p>Trưởng phòng HC - TH</p>
-                            <P>ĐTDĐ: 0913.386.107</P>
-                            <P>
-                                ĐTCQ: 0280.3825.868
-                            </P>
-                            <P>
-                                Email:  chiennv.bqlhnc.@gmail.com
-                            </P>
-                        </div>
+                <!-- Passion -->
+                <div class="col-md-4">
+                    <h3>Phạm Đức Toàn</h3>
+                    <p>Trưởng ban</p>
+                    <P>ĐTDĐ: 0912.477.999</P>
+                    <P>
+                        ĐTCQ: 0280.3825.782
+                    </P>
+                    <P>
+                        Email: toanpd@thainguyen.gov.vn
+                    </P>
+                </div>
 
 
-                        <!-- Precision -->
-                        <div class="col-md-4">
-                            <h3>Nguyễn Thị Thanh Tâm: </h3>
-                            <p>Trưởng phòng KH - NVDL</p>
-                            <P>ĐTDĐ: 0915.176.777</P>
-                            <P>
-                                ĐTCQ: 0280.3825.868
-                            </P>
-                            <P>
-                                Email:   lamnguyenthe.tn@gmail.com
-                            </P>
-                        </div>
+                <!-- Precision -->
+                <div class="col-md-4">
+                    <h3>Nguyễn Văn Chiến</h3>
+                    <p>Trưởng phòng HC - TH</p>
+                    <P>ĐTDĐ: 0913.386.107</P>
+                    <P>
+                        ĐTCQ: 0280.3825.868
+                    </P>
+                    <P>
+                        Email:  chiennv.bqlhnc.@gmail.com
+                    </P>
+                </div>
 
-                    </div>
-                </article>
 
-                <!-- curriculum vitae button  -->
-                <!--
-                    <article class="curriculum-vitae text-center">
-                        <a href="#" class="plusNav">+</a> 
-                        <p>curriculum vitae</p>
-                    </article>
-                -->
+                <!-- Precision -->
+                <div class="col-md-4">
+                    <h3>Nguyễn Thị Thanh Tâm: </h3>
+                    <p>Trưởng phòng KH - NVDL</p>
+                    <P>ĐTDĐ: 0915.176.777</P>
+                    <P>
+                        ĐTCQ: 0280.3825.868
+                    </P>
+                    <P>
+                        Email:   lamnguyenthe.tn@gmail.com
+                    </P>
+                </div>
 
             </div>
-        </section>
-        <!-- /ABOUT -->
+        </article>
+
+        <!-- curriculum vitae button  -->
+        <!--
+            <article class="curriculum-vitae text-center">
+                <a href="#" class="plusNav">+</a> 
+                <p>curriculum vitae</p>
+            </article>
+        -->
+
+    </div>
+</section>
+<!-- /ABOUT -->
 
 
 
@@ -258,7 +258,6 @@
             </ul>
         </address>
     </div>
-
     <div id="gmap"></div>
 </section>
 <!-- GOOGLE MAP -->

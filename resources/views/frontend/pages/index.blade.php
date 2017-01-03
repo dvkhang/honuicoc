@@ -46,7 +46,7 @@
                     </li>
 
                     <li class="isotope-item col-sm-6 col-md-4 video"><!-- item -->
-                        <a class="popup-video" href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0">
+                        <a class="popup-video" href="https://www.youtube.com/watch?v=70833flifmo">
                             <img src="{{asset('frontend')}}/images/preview/content/portfolio/p2.jpg" class="img-responsive" alt="img" />
                             <div class="caption">
                                 <i class="rounded fa fa-film"></i>
@@ -57,7 +57,7 @@
                     </li>
 
                     <li class="isotope-item col-sm-6 col-md-4 video brand"><!-- item -->
-                        <a class="popup-video" href="http://vimeo.com/23630702">
+                        <a class="popup-video" href="https://www.youtube.com/watch?v=70833flifmo">
                             <img src="{{asset('frontend')}}/images/preview/content/portfolio/p3.jpg" class="img-responsive" alt="img" />
                             <div class="caption">
                                 <i class="rounded fa fa-film"></i>
@@ -77,48 +77,27 @@
 <!-- /WORK -->
 
 
-<!-- SERVICES -->
-<section id="services">
 
-    <header class="text-center">
-        <h1>GIÁ VÉ</h1>
-    </header>
+<section id="services" class="util-row">
+    <div class="container text-center">
 
-    <div class="divider"><!-- lines divider --></div>
+        <header class="text-center">
+            <h1>GIÁ VÉ</h1>
+        </header>
 
-    <div class="inner-cover" style="background-image:url('assets/images/preview/slider/3.jpg')">
-
-        <!--
-            Optional - raster or overlay backgrounds, for brighten images.
-            <span class="raster"></span>
-
-            Default overlay: black, opacity 0.5
-            Gray overlay: #212121 , opacity 0.9
-            Remove 'gray' class for default overlay
-
-            <span class="overlay gray"></span>
-        -->
-        <span class="overlay gray"></span>
-
-        <div class="container text-center">
-
-            <ul class="services animate_from_bottom">
-                @foreach($tickets as $ticket)
-                    <li><!-- service 1 -->
-                        <a href="#service-1" class="service yellow scrollTo">
-                            @if($ticket->getMedia()->isEmpty()== false)
-                            <img src="{{asset($ticket->getMedia()[0]->getUrl())}}" height="120" width="120" alt="">
-                            @endif
-                            <h3>{{$ticket->classify}}</h3>
-                            <p>{{$ticket->price}} VNĐ</p>
-                        </a>
-                    </li>
-                @endforeach    
-            </ul>
+        <div class="row">
+            @foreach($tickets as $ticket)
+                <div class="col-lg-4">
+                    @if($ticket->getMedia()->isEmpty()== false)
+                        <img src="{{asset($ticket->getMedia()[0]->getUrl())}}" height="120" width="120" alt="">
+                    @endif
+                    <h2>{{$ticket->classify}}</h2>
+                    <p>{{$ticket->price}} VNĐ</p>
+                </div>
+            @endforeach    
         </div>
     </div>
 </section>
-<!-- SERVICES -->
 
 
 <!-- BLOG -->
@@ -144,7 +123,7 @@
                                 <img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/360x200/#676767:#555555/auto/" alt="img" />
                             </figure>
                             <h4>{{$post->title}}l</h4>
-                            <p>{{$post->summary}}</p>
+                            <p>{{the_excerpt($post->summary)}}</p>
                             <a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
                         </div>
                     </div>

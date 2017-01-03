@@ -98,7 +98,7 @@
 						</div>
 
 						<span class="overlay"></span>
-						<div style="background-image: url('{{asset('frontend')}}/images/preview/slider/background.jpg');" class="fullscreen-img"></div>
+						<div style="background-image: url('{{asset('frontend')}}/images/preview/slider/slider3.jpg');" class="fullscreen-img"></div>
 					</li>
 
 					<!-- Item 2 -->
@@ -113,7 +113,7 @@
 						</div>
 
 						<!--<span class="overlay"></span>-->
-						<div style="background-image: url('{{asset('frontend')}}/images/preview/slider/vision.jpg');" class="fullscreen-img"></div>
+						<div style="background-image: url('{{asset('frontend')}}/images/preview/slider/slider2.jpg');" class="fullscreen-img"></div>
 					</li>
 
 
@@ -215,7 +215,7 @@
 					</div>
 
 					<div class="col-md-6 text-right">
-						<a href="#" class="social fa fa-facebook"></a>
+						<a href="https://www.facebook.com/Du-l%E1%BB%8Bch-huy%E1%BB%81n-tho%E1%BA%A1i-h%E1%BB%93-N%C3%BAi-C%E1%BB%91c-423207121067820/?hc_ref=PAGES_TIMELINE&fref=nf" class="social fa fa-facebook"></a>
 						<a href="#" class="social fa fa-twitter"></a>
 						<a href="#" class="social fa fa-google-plus"></a>
 					</div>

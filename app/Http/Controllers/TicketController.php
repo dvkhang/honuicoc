@@ -49,9 +49,7 @@ class TicketController extends Controller
         if($ticket ==1){
             if($request->hasFile('file')){
                 $add_ticket =  Ticket::findOrFail($id);
-                foreach($request->file as $image){
-                    $add_ticket->addMedia($image)->toMediaLibrary();
-                }
+                $add_ticket->addMedia($request->file)->toMediaLibrary();
             }
         }
         return Redirect::to('admin/ticket/list');

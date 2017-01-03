@@ -88,7 +88,7 @@
 						</div>
 
 						<span class="overlay"></span>
-						<div style="background-image: url('{{asset('frontend')}}/images/preview/slider/background.jpg');" class="fullscreen-img"></div>
+						<div style="background-image: url('{{asset('frontend')}}/images/preview/slider/slider3.jpg');" class="fullscreen-img"></div>
 					</li>
 
 					<!-- Item 2 -->
@@ -103,7 +103,7 @@
 						</div>
 
 						<!--<span class="overlay"></span>-->
-						<div style="background-image: url('{{asset('frontend')}}/images/preview/slider/vision.jpg');" class="fullscreen-img"></div>
+						<div style="background-image: url('{{asset('frontend')}}/images/preview/slider/slider2.jpg');" class="fullscreen-img"></div>
 					</li>
 
 

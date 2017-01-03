@@ -37,6 +37,7 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'title' => $faker->name,
         'summary' => $faker->text,
         'description' => $faker->text.$faker->text.$faker->text,
+        'status' => 1,
         'category_id' => rand(1,5),
     ];
 });

@@ -46,7 +46,7 @@
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="file" name="file[]" multiple>
+                                        <input type="file" name="file">
                                     </div>
                                 </div>
                                 <button class="btn btn-primary waves-effect" type="submit">Thêm</button>

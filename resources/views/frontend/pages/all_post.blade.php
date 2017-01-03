@@ -25,7 +25,7 @@
 							<!-- image -->
 							<figure>
 		                        @if($post->getMedia()->isEmpty()==false)
-		                            <img src="{{asset($post->getMedia()[0]->getUrl())}}" class="img-responsive" data-src="{{asset($post->getMedia()[0]->getUrl())}}/820x500/#676767:#555555/auto/" alt="img" />
+		                            <img src="{{asset($post->getMedia()[0]->getUrl())}}" style="max-width: 820px; max-height: 500px;" class="img-responsive" data-src="{{asset($post->getMedia()[0]->getUrl())}}/820x500/#676767:#555555/auto/" alt="img" />
 		                        @else
 		                            <img src="assets/images/1x1.png" class="img-responsive" data-src="holder.js/820x500/#676767:#555555/auto/" alt="img" />
 		                        @endif
@@ -73,47 +73,7 @@
 					<div class="right col-md-3">
 
 						<!-- blog search -->
-						<div class="widget">
-
-							<h3>Blog Search</h3>
-
-							<form action="#" method="get" class="blog-search col-lg-12 nomargin nopadding">
-								<div class="input-group input-group-lg">
-									<input type="text" class="form-control" name="s" id="s" placeholder="..." />
-									<span class="input-group-btn">
-										<button class="btn btn-primary"><i class="fa fa-search"></i></button>
-									</span>
-								</div>
-							</form>
-						</div>
-
-						<!-- recent work -->
-						<div class="widget">
-
-							<h3>Recent Work </h3>
-
-							<a class="popup-image thumb" href="{{asset('frontend')}}/images/preview/slider/1.jpg">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
-							</a>
-							<a class="popup-video thumb" href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
-							</a>
-							<a class="popup-video thumb" href="http://vimeo.com/23630702">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
-							</a>
-
-							<a class="external ajax-project thumb" href="project-external-1.html">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
-							</a>
-							<a class="external ajax-project thumb" href="project-external-2.html">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
-							</a>
-							<a class="external ajax-project thumb" href="project-external-3.html">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
-							</a>
-
-							<div class="clearfix"></div>
-						</div>
+						
 
 						<!-- categories -->
 						<div class="widget">

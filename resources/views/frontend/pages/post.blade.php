@@ -13,8 +13,7 @@
 							<h1>{{$post->title}}</h1>
 							<small class="fsize13">
 								<a href="blog.html" class="label label-default light"><i class="fa fa-dot-circle-o"></i> {{$post->category->name}}</a>
-								<a href="#comments" class="scrollTo label label-default light"><i class="fa fa-comment-o"></i> 3 Comments</a>
-								<span class="label label-default light">September 12, 2013</span> 
+								<span class="label label-default light">{{$post->category->updated_at}}</span> 
 							</small>
 						</header>
 
@@ -23,7 +22,7 @@
 							<div class="owl-carousel text-left" data-navigation="false" data-singleitem="true" data-autoplay="true" data-transition="fade">
 								@foreach($post->getMedia() as $item)
 									<div class="item dragCursor">
-										<img src="{{asset($item->getUrl())}}" class="img-responsive" data-src="{{asset($item->getUrl())}}/820x500/#888:#ccc/auto/" alt="img" />
+										<img src="{{asset($item->getUrl())}}" style="max-height: 500px; max-width: 820px;"  class="img-responsive" data-src="{{asset($item->getUrl())}}/820x500/#888:#ccc/auto/" alt="img" />
 									</div>
 								@endforeach
 							</div>
@@ -52,18 +51,16 @@
 
 						<!-- SOCIAL -->
 						<p class="socials">
-							<a href="#" class="rounded-icon social fa fa-facebook"><!-- facebook --></a>
+							<a href="https://www.facebook.com/Du-l%E1%BB%8Bch-huy%E1%BB%81n-tho%E1%BA%A1i-h%E1%BB%93-N%C3%BAi-C%E1%BB%91c-423207121067820/?hc_ref=PAGES_TIMELINE&fref=nf" class="rounded-icon social fa fa-facebook"><!-- facebook --></a>
 							<a href="#" class="rounded-icon social fa fa-twitter"><!-- twitter --></a>
 							<a href="#" class="rounded-icon social fa fa-google-plus"><!-- google plus --></a>
-							<a href="#" class="rounded-icon social fa fa-pinterest"><!-- pinterest --></a>
-							<a href="#" class="rounded-icon social fa fa-linkedin"><!-- linkedin --></a>
+							
 						</p>
 						
 						<hr /><!-- divider -->
 
 						<!-- COMMENTS -->
 						<div id="comments">
-							{{-- <h2><span class="fb-comments-count" data-href="http://localhost:8000/post/2"></span> Comments</h2> --}}
 							<!-- comment item -->
 							{{-- FACEBOOK --}}
 							<div class="fb-comments" data-href="http://localhost/honuicoc/public/post/{{$post->id}}" data-width="750" data-numposts="3"></div>

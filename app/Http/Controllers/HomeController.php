@@ -34,12 +34,12 @@ class HomeController extends Controller
     public function index()
     {
         $tickets =  Ticket::all();
-        $posts =  Post::orderBy('id', 'DESC')->limit(6)->get();
+        $posts =  Post::where('status', '1')->orderBy('id', 'DESC')->limit(6)->get();
         return view('frontend.pages.index', compact('posts', 'tickets'));
     }
 
     public function category($id){
-        $posts = Post::where('category_id', $id)->paginate(10);
+        $posts = Post::where('status', '1')->where('category_id', $id)->paginate(10);
         $categories = Category::all();
         $recent_posts = Post::orderBy('id', 'DESC')->limit(5)->get();
         return view('frontend.pages.category',compact('posts', 'categories', 'recent_posts'));
@@ -55,12 +55,14 @@ class HomeController extends Controller
     public function allPost()
     {
         # code...
-        $posts =  Post::paginate(10);
+        $posts =  Post::where('status', '1')->paginate(10);
         $categories = Category::all();
         $recent_posts = Post::orderBy('id', 'DESC')->limit(5)->get();
         return view('frontend.pages.all_post',compact('posts', 'categories', 'recent_posts'));
 
     }
+
+    
 
 
 

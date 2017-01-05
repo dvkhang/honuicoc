@@ -1,4 +1,4 @@
-@extends('admin.templates.default', ['title'=>'Add Post',
+@extends('admin.templates.default', ['title'=>'Thêm bài viết',
             'libs_elements'=>['node-waves', 'animate', 'bootstrap-select','dropzone', 'ckeditor', 'jquery-slimscroll'],
             'customs_css'=>[],
             'custom_scripts'=>[
@@ -15,19 +15,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Add Post</h2>
-                            <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <h2>Thêm bài viết</h2>
                         </div>
 
 
@@ -37,13 +25,13 @@
 
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                        <label for="email_address_2">Category</label>
+                                        <label for="email_address_2">Danh mục</label>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <select name="category" required  class="form-control show-tick" data-show-subtext="true">
-                                                    <option value="">-- Please select Category --</option>
+                                                    <option value="">-- Vui lòng chọn danh mục --</option>
                                                     <?php $categories =  \Illuminate\Support\Facades\DB::table('categories')->get();
                                                     ?>
                                                     @foreach($categories as $category)
@@ -57,7 +45,7 @@
 
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label" >
-                                        <label for="email_address_2">Name</label>
+                                        <label for="email_address_2">Tiêu đề</label>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
@@ -70,7 +58,7 @@
 
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                        <label for="email_address_2">Summary</label>
+                                        <label for="email_address_2">Tóm tắt</label>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
@@ -83,7 +71,7 @@
 
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                        <label for="email_address_2">Description</label>
+                                        <label for="email_address_2">Nội dung</label>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
@@ -117,7 +105,7 @@
 
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                        <label for="email_address_2">Image</label>
+                                        <label for="email_address_2">Hình Ảnh</label>
                                     </div>
                                     <div class="col-lg-3 col-md-4 col-sm-5 col-xs-7">
                                         <div class="form-group">
@@ -136,7 +124,7 @@
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="">
-                                                <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+                                                <button class="btn btn-primary waves-effect" type="submit">Thêm bài</button>
                                             </div>
                                         </div>
                                     </div>

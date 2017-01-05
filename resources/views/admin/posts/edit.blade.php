@@ -1,4 +1,4 @@
-@extends('admin.templates.default', ['title'=>'Edit Post',
+@extends('admin.templates.default', ['title'=>'Sửa bài viết',
             'libs_elements'=>['node-waves', 'animate', 'bootstrap-select', 'sweetalert', 'bootstrap-notify','ckeditor', 'jquery-slimscroll'],
             'customs_css'=>[
                 URL::asset('/admin/css/products/delete-image.css'),

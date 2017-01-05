@@ -81,8 +81,8 @@
 						<div class="image-caption">
 							<hr /><hr />
 							<div class="inner">
-								<h2 class="bigtext strtoupper nomargin">Let's work together</h2>
-								<p>WE ARE <strong>ISIS ONE</strong> AGENCY</p>
+								<h1 class="">nàng công, chàng cốc</h1>
+								<p>Huyền thoại<strong> Lưu truyền</strong> </p>
 							</div>
 							<hr /><hr />
 						</div>
@@ -165,7 +165,6 @@
 						<a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="{{url('/')}}" class="scrollTo">Trang chủ</a></li>
 							<li><a href="#work" class="scrollTo">Giới thiệu</a></li>
 							<li><a href="#services" class="scrollTo">Giá Vé</a></li>
 							<li><a href="{{url('post')}}">Bài Viết</a></li>
@@ -200,8 +199,8 @@
 				<div class="row">
 
 					<div class="col-md-6 copyright">
-						Your Company, LTD<br />
-						2014 &copy; All Rights Reserved.
+						Hồ Núi Cốc, LTD<br />
+						2016 &copy; Lê Trung Dũng.
 					</div>
 
 					<div class="col-md-6 text-right">

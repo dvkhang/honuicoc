@@ -18,8 +18,7 @@
 							<div class="item-title">
 								<h2><a href="{{url('post', ['id'=>$post->id])}}">{{$post->title}}</a></h2>
 								<a href="{{url('category', ['id'=>$post->category->id])}}" class="label label-default light"><i class="fa fa-dot-circle-o"></i> {{$post->category->name}}</a> 
-								<a href="blog-post.html#comments" class="scrollTo label label-default light"><i class="fa fa-comment-o"></i> 3 Comments</a>
-								<span class="label label-default light">September 12, 2013</span> 
+								<span class="label label-default light">{{$post->updated_at}}</span> 
 							</div>
 
 							<!-- image -->
@@ -37,7 +36,7 @@
 							</p>
 
 							<!-- read more button -->
-							<a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+							<a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> Xem thêm</a>
 
 						</div>
 						@endforeach
@@ -78,7 +77,7 @@
 						<!-- categories -->
 						<div class="widget">
 
-							<h3>Categories</h3>
+							<h3>Danh mục</h3>
 
 							<ul>
 								@foreach($categories as $category)
@@ -91,7 +90,7 @@
 						<!-- recent posts -->
 						<div class="widget">
 
-							<h3>Recent Posts</h3>
+							<h3>Bài đăng gần đây</h3>
 
 							<ul>
 								@foreach($recent_posts as $recent_post)

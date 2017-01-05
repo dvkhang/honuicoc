@@ -267,7 +267,7 @@ section .btn {
 #header .navbar-inverse {
 	border:0;
 	border-radius:0;
-	background:#0F1113;
+	background:#3498db;
 }
 	#header .navbar-inverse ul.nav {
 		margin-right:20px;
@@ -283,7 +283,7 @@ section .btn {
 	}
 	#header .navbar-inverse ul.nav li.active a,
 	#header .navbar-inverse ul.nav a:hover {
-		color:#ABA798;
+		color:#bdc3c7;
 	}
 	#header .navbar-collapse {
 		padding:0;
@@ -310,8 +310,8 @@ section .btn {
 	display:inline-block;
 	float:right;
 	font-size:26px;
-	background:#232428;
-	color:#ABA798;
+	background:#3498db;
+	color:#ecf0f1;
 	right:0;
 	top:0;
 	bottom:0;
@@ -377,7 +377,7 @@ section .btn {
 	#home .image-caption h2 {
 		font-family: 'Open Sans', sans-serif;
 		font-weight:800;
-		font-size:600%;
+		font-size:300%;
 		line-height:95%;
 		text-transform:uppercase;
 		text-shadow:none;
@@ -808,7 +808,7 @@ section.util-row {
 	color:#fff;
 	position:relative;
 	overflow:hidden;
-	background:#333;
+	background:#2ecc71;
 	padding:40px 0;
 }
 section.util-row .btn {

@@ -12,7 +12,7 @@
 						<header>
 							<h1>{{$post->title}}</h1>
 							<small class="fsize13">
-								<a href="blog.html" class="label label-default light"><i class="fa fa-dot-circle-o"></i> {{$post->category->name}}</a>
+								<a href="{{url('category',['id'=>$post->category->id])}}" class="label label-default light"><i class="fa fa-dot-circle-o"></i> {{$post->category->name}}</a>
 								<span class="label label-default light">{{$post->category->updated_at}}</span> 
 							</small>
 						</header>
@@ -120,7 +120,7 @@
 						<!-- categories -->
 						<div class="widget">
 
-							<h3>Categories</h3>
+							<h3>Danh mục</h3>
 
 							<ul>
                                 @foreach($categories as $category)
@@ -133,11 +133,11 @@
 						<!-- recent posts -->
 						<div class="widget">
 
-							<h3>Recent Posts</h3>
+							<h3>Bài đăng gần đây</h3>
 
 							<ul>
                                 @foreach($recent_posts as $recent_post)
-								<li><a href="{{url('post', ['id'=>$recent_post->id])}}"><i class="fa fa-sign-out"></i>{{$recent_post->title}}t</a> <small>23 June 2013 / 12:43</small></li>
+								<li><a href="{{url('post', ['id'=>$recent_post->id])}}"><i class="fa fa-sign-out"></i>{{$recent_post->title}}</a> <small>{{$recent_post->updated_at}}</small></li>
 								@endforeach
 							</ul>
 

@@ -5,7 +5,6 @@ ul.bstrap-tabs li.active a i,
 section.util-row h1,
 .pagination>li>a, .pagination>li>span, .pagination>li>a:hover,
 a {
-	color:#7E8344;
 }
 a:hover {
 	color:#999e52;
@@ -14,7 +13,7 @@ a:hover {
 ul.pagination li.active a,
 ul.pagination li.active a:hover,
 .styleBackground {
-	background-color:#7E8344;
+	background-color:#3498db;
 }
 
 .btn.btn-primary {
@@ -23,11 +22,11 @@ ul.pagination li.active a:hover,
 }
 
 .plusNav {
-	background:#7E8344;
+	background:#2980b9;
 }
 .plusNav:hover {
 	color:#fff;
-	box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #7E8344, 0 0 0 10px rgba(255,255,255,0.5);
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #2980b9, 0 0 0 10px rgba(255,255,255,0.5);
 }
 
 ul.bstrap-tabs>li.active>a:hover, 

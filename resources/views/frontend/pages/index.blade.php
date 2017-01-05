@@ -91,8 +91,9 @@
                     @if($ticket->getMedia()->isEmpty()== false)
                         <img src="{{asset($ticket->getMedia()[0]->getUrl())}}" height="120" width="120" alt="">
                     @endif
-                    <h2>{{$ticket->classify}}</h2>
-                    <p>{{$ticket->price}} VNĐ</p>
+                    <p>{{$ticket->classify}}</p>
+                    <h2>{{$ticket->price}} VNĐ</h2>
+                    
                 </div>
             @endforeach    
         </div>
@@ -122,9 +123,9 @@
                             <figure class="media-preview"><!-- image -->
                                 <img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/360x200/#676767:#555555/auto/" alt="img" />
                             </figure>
-                            <h4>{{$post->title}}l</h4>
+                            <h4>{{$post->title}}</h4>
                             <p>{{the_excerpt($post->summary)}}</p>
-                            <a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+                            <a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> Xem thêm</a>
                         </div>
                     </div>
                     @endforeach
@@ -135,7 +136,7 @@
         <div class="divider"><!-- lines divider --></div>
 
         <article class="text-center" data-animation="bounceIn">
-            <a href="blog.html" class="plusNav" title="more from blog">+</a>
+            <a href="{{url('post')}}" class="plusNav" title="more from blog">+</a>
         </article>
 
     </div>
@@ -143,7 +144,7 @@
 <!-- /BLOG -->
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="util-row">
     <div class="container">
         <header class="text-center">
             <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
@@ -154,7 +155,6 @@
         <article class="text-center big-paragraph">
             <p>BAN QUẢN LÝ KHU DU LỊCH VÙNG HỒ NÚI CỐC</p>
         </article>
-        <article>
             <div class="row text-left">
 
                 <!-- Passion -->

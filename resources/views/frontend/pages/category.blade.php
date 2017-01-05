@@ -18,8 +18,7 @@
 							<!-- article title -->
 							<div class="item-title">
 								<h2><a href="blog-post.html">{{$post->title}}</a></h2>
-								<a href="blog.html" class="label label-default light"><i class="fa fa-dot-circle-o"></i> Business</a> 
-								<a href="blog-post.html#comments" class="scrollTo label label-default light"><i class="fa fa-comment-o"></i> 3 Comments</a>
+								<a href="{{url('category', ['id'=>$post->category->id])}}" class="label label-default light"><i class="fa fa-dot-circle-o"></i> {{$post->category->name}}</a> 
 								<span class="label label-default light">September 12, 2013</span> 
 							</div>
 
@@ -37,8 +36,8 @@
 								{!! $post->summary !!}
 							</p>
 
-							<!-- read more button -->
-							<a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> READ MORE</a>
+							<!-- Xem thêm button -->
+							<a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> Xem thêm</a>
 
 						</div>
 						@endforeach
@@ -74,52 +73,12 @@
 					<div class="right col-md-3">
 
 						<!-- blog search -->
-						<div class="widget">
-
-							<h3>Blog Search</h3>
-
-							<form action="#" method="get" class="blog-search col-lg-12 nomargin nopadding">
-								<div class="input-group input-group-lg">
-									<input type="text" class="form-control" name="s" id="s" placeholder="..." />
-									<span class="input-group-btn">
-										<button class="btn btn-primary"><i class="fa fa-search"></i></button>
-									</span>
-								</div>
-							</form>
-						</div>
-
-						<!-- recent work -->
-						<div class="widget">
-
-							<h3>Recent Work </h3>
-
-							<a class="popup-image thumb" href="{{asset('frontend')}}/images/preview/slider/1.jpg">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
-							</a>
-							<a class="popup-video thumb" href="http://www.youtube.com/watch?v=kh29_SERH0Y?rel=0">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
-							</a>
-							<a class="popup-video thumb" href="http://vimeo.com/23630702">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
-							</a>
-
-							<a class="external ajax-project thumb" href="project-external-1.html">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
-							</a>
-							<a class="external ajax-project thumb" href="project-external-2.html">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#888:#555555/auto/" alt="img" />
-							</a>
-							<a class="external ajax-project thumb" href="project-external-3.html">
-								<img src="{{asset('frontend')}}/images/1x1.png" class="ajax-project img-responsive" data-src="holder.js/85x85/#676767:#555555/auto/" alt="img" />
-							</a>
-
-							<div class="clearfix"></div>
-						</div>
+						
 
 						<!-- categories -->
 						<div class="widget">
 
-							<h3>Categories</h3>
+							<h3>Danh Mục</h3>
 
 							<ul>
 								@foreach($categories as $category)
@@ -132,11 +91,11 @@
 						<!-- recent posts -->
 						<div class="widget">
 
-							<h3>Recent Posts</h3>
+							<h3>Bài đăng gần đây</h3>
 
 							<ul>
 								@foreach($recent_posts as $recent_post)
-									<li><a href="{{url('post', ['id'=>$recent_post->id])}}"><i class="fa fa-sign-out"></i>{{$recent_post->title}}t</a> <small>23 June 2013 / 12:43</small></li>
+									<li><a href="{{url('post', ['id'=>$recent_post->id])}}"><i class="fa fa-sign-out"></i>{{$recent_post->title}}t</a> <small>{{$recent_post->updated_at}}</small></li>
 								@endforeach
 							</ul>
 

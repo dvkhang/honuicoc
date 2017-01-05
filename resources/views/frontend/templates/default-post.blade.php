@@ -175,7 +175,6 @@
 						<a href="#" class="btn-fullscreen"><i class="fa fa-external-link"></i></a>
 
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="{{url('/')}}#home" >Trang chủ</a></li>
 							<li><a href="{{url('/')}}#work" >Giới thiệu</a></li>
 							<li><a href="{{url('/')}}#services" >Giá Vé</a></li>
 							<li><a href="{{url('post')}}">Bài Viết</a></li>

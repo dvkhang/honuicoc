@@ -28,6 +28,8 @@ Route::get('contact', 'HomeController@contact');
 
 Route::get('about', 'HomeController@about');
 Route::get('collection', 'HomeController@collection');
+Route::get('ticket', 'HomeController@ticket');
+
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {

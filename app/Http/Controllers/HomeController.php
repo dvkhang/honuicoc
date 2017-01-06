@@ -35,8 +35,9 @@ class HomeController extends Controller
     public function index()
     {
         $tickets =  Ticket::all();
+        $collections =Collection::orderBy('id', 'DESC')->limit(3)->get();
         $posts =  Post::where('status', '1')->orderBy('id', 'DESC')->limit(4)->get();
-        return view('frontend.pages.index', compact('posts', 'tickets'));
+        return view('frontend.pages.index', compact('posts', 'tickets', 'collections'));
     }
 
     public function category($id){
@@ -84,6 +85,14 @@ class HomeController extends Controller
         # code...
         $collections = Collection::all();
         return view('frontend.pages.collection', compact('collections'));
+
+    }
+
+    public function ticket()
+    {
+        # code...
+        $tickets = Ticket::all();
+        return view('frontend.pages.ticket', compact('tickets'));
 
     }
     

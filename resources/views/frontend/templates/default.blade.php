@@ -64,7 +64,7 @@
 		<header>
 			<div class="container_12">
 				<div class="grid_12">
-					<h1><a href="{{url('/')}}"><img src="{{asset('frontend')}}/images/logo.png" alt="Gerald Harris attorney at law"></a> </h1>
+					<h1><a href="{{url('/')}}"><img src="{{asset('frontend')}}/images/logonuicoc.png" alt="Gerald Harris attorney at law"></a> </h1>
 					<div class="clear"></div>
 				</div>
 				<div class="menu_block">

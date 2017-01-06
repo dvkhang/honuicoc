@@ -32,23 +32,27 @@
 
 <!--=======content================================-->
 <div class="content">
-    <div class="ic">More Website Templates @ TemplateMonster.com - August 05, 2013!</div>
+    <div class="ic">Hồ núi cốc</div>
     <div class="container_12">
         <div class="grid_12">
-            <h3>Top Destinations</h3>
+            <h3>Bộ sưu tập</h3>
         </div>
         <div class="boxes">
+        @foreach($collections as $collection)
             <div class="grid_4">
                 <figure>
+                @if($collection->getMedia()->isEmpty()==false)
+                    <div><img src="{{asset($collection->getMedia()[0]->getUrl())}}" alt=""></div>
+                    @else
                     <div><img src="{{asset('frontend')}}/images/page1_img1.jpg" alt=""></div>
+                @endif    
                     <figcaption>
-                        <h3>Venice</h3>
-                        Lorem ipsum dolor site geril amet, consectetur cing eliti. Suspendisse nulla leo mew dignissim eu velite a rew qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat. Rabi tur oliti aliquam bibendum olor quis malesuadivamu.
-                        <a href="" class="btn">Details</a>
+                        <h3>{{$collection->title}}</h3>
                     </figcaption>
                 </figure>
             </div>
-            <div class="grid_4">
+        @endforeach    
+{{--             <div class="grid_4">
                 <figure>
                     <div><img src="{{asset('frontend')}}/images/page1_img2.jpg" alt=""></div>
                     <figcaption>
@@ -68,7 +72,7 @@
                         <a href="" class="btn">Details</a>
                     </figcaption>
                 </figure>
-            </div>
+            </div> --}}
             <div class="clear"></div>
         </div>
         <div class="grid_8">
@@ -138,7 +142,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid_4">
+        {{-- <div class="grid_4">
             <div class="newsletter_title">NewsLetter </div>
             <div class="n_container">
                 <form id="newsletter">
@@ -161,7 +165,7 @@
                     <li><a href="#">Zdfem psum dr sittr amewe </a></li>
                 </ul>
             </div>
-        </div>
+        </div> --}}
         <div class="clear"></div>
     </div>
 </div>

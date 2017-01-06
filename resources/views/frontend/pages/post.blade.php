@@ -18,7 +18,7 @@
 				
 				<div class="extra_wrapper">
 					<br>
-					<p class="text1">{!! $post->description !!}</p>
+					<p class="text1">{!! html_entity_decode($post->description) !!}</p>
 				</div>
 			</div>
 			

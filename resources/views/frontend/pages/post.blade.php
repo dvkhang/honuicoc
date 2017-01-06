@@ -21,6 +21,7 @@
 					<p class="text1">{!! $post->description !!}</p>
 				</div>
 			</div>
+			
 
 			
 		</div>

@@ -1,7 +1,7 @@
  
 .menu_block  {
 	position: relative;
-	padding-left: 144px;
+	padding-left: 10px;
 	padding-top: 97px;
 
 }
@@ -34,7 +34,7 @@ nav{ position:relative;padding: 0px 0 0 0;}
 .sf-menu>li>a{
 	text-transform: uppercase;
 	font-size: 28px;
-	font-family: 'Pathway Gothic One', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
 	color: #fff;
 	position: relative;
 	font-weight: 300px;
@@ -95,7 +95,7 @@ border-color: transparent transparent #ffffff
 
 .sf-menu li ul li a{
 	text-transform: uppercase;
-	font: 20px/20px 'Pathway Gothic One', sans-serif;;
+	font: 20px/20px 'Open Sans Condensed', sans-serif;
 	position: relative;
 	color: #6b7488;
 

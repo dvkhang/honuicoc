@@ -8,14 +8,14 @@
 			<h3>{{$category->name}}</h3>
 			@foreach($posts as $post)
 			<div class="blog">
-				<time datetime="{{$post->updated_at}}">23<br>
+				<time datetime="{{$post->updated_at}}">{{$post->updated_at}}<br>
 				APR</time>
 				<div class="extra_wrapper">
 					<div class="text1 upp">{{$post->title}} </div>
 				</div>
 				<div class="clear"></div>
 				@if($post->getMedia()->isEmpty()==false)
-					<img src="{{asset($post->getMedia()[0]->getUrl())}}" alt="" class="img_inner fleft">
+					<img src="{{asset($post->getMedia()[0]->getUrl())}}" width="360" height="281" alt="" class="img_inner fleft">
 				@else
 					<img src="{{asset('frontend')}}/images/page5_img1.jpg" alt="" class="img_inner fleft">
 				@endif
@@ -31,9 +31,9 @@
 
 
 			<div class="text-center">
-				<ul class="list-inline">
+				<ul class="pagination" >
 					@if($posts->currentPage() != 1)
-						<li><a href="{{$posts->previousPageUrl()}}"><i class="fa fa-chevron-left"></i></a></li>
+						<li><a href="{{$posts->previousPageUrl()}}">Trang trước</i></a></li>
 					@endif
 					@if($posts->lastPage()>1)
 						@for($i=1; $i<=$posts->lastPage(); $i++)
@@ -41,7 +41,7 @@
 						@endfor
 					@endif
 					@if($posts->lastPage() != $posts->currentPage())
-						<li><a href="{{$posts->nextPageUrl()}}"><i class="fa fa-chevron-right"></i></a></li>
+						<li><a href="{{$posts->nextPageUrl()}}">Trang sau</i></a></li>
 					@endif
 				</ul>
 			</div>

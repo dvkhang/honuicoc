@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="content">
-	<center><h1 >Ban quản lý khu du lịch Hồ Núi Cốc</h1></center>
+	<center><h3 >Ban quản lý khu du lịch Hồ Núi Cốc</h3></center>
 	 <div class="container row text-left" style="padding-left: 100px;">
                 <!-- Passion -->
         <div class="col-md-4">

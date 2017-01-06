@@ -8,17 +8,20 @@
                 <div class="slider">
                     <a href="#" class="prev"></a><a href="#" class="next"></a>
                     <ul class="items">
-                        <li>
-                            <img src="{{asset('frontend')}}/images/slide.jpg" alt="">
+                        <li><img src="{{asset('frontend')}}/images/slider444.jpg" alt="">
                             <div class="banner">
-                                <div>THERE ARE PLENTY OF PLACES</div>
+                                <div>Hồ Núi Cốc</div>
                                 <br>
-                                <span> that are worth seeing</span>
+                                <span> non nước hữu tình</span>
                             </div>
                         </li>
-                        <li><img src="{{asset('frontend')}}/images/slide1.jpg" alt=""></li>
-                        <li><img src="{{asset('frontend')}}/images/slide2.jpg" alt=""></li>
-                        <li><img src="{{asset('frontend')}}/images/slide3.jpg" alt=""></li>
+                        <li><img src="{{asset('frontend')}}/images/slider111.jpg" alt="">
+                            
+                        </li>
+                            
+                        <li><img src="{{asset('frontend')}}/images/slider222.jpg" alt=""></li>
+                        
+                        <li><img src="{{asset('frontend')}}/images/slider333.jpg" alt=""></li>
                     </ul>
                 </div>
             </div>
@@ -78,8 +81,13 @@
                 <div class="clear"></div>
                 <div class="tab_cont" id="tabs-1">
                     @foreach($posts as $post)
-                        <img src="{{asset('frontend')}}/images/page1_img4.jpg" alt="">
+                        @if($post->getMedia()->isEmpty()==false)
+                            <img src="{{asset($post->getMedia()[0]->getUrl())}}" width="246" height="130" alt="">
+                        @else
+                            <img src="{{asset('frontend')}}/images/page1_img4.jpg" alt="">
+                        @endif
                         <div class="extra_wrapper">
+                        <br>
                             <div class="text1">{{$post->title}}. </div>
                             
                             {{$post->summary}}

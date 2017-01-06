@@ -54,6 +54,12 @@
 
 	</head>
 	<body	class="page1">
+	
+@inject('request', 'Illuminate\Http\Request')
+<?php
+	$arr=explode('/', $request->path());
+?>
+
 		<!--==============================header=================================-->
 		<header>
 			<div class="container_12">
@@ -62,16 +68,17 @@
 					<div class="clear"></div>
 				</div>
 				<div class="menu_block">
-					<nav	class="" >
+					<nav class="" >
 						<ul class="sf-menu">
-							<li class="current"><a href="{{url('/')}}">Trang chủ</a></li>
-							<li class="with_ul">
-								<a href="{{url('/about')}}">About</a>
+
+							<li class="{{$arr[0]==''?'current':''}}"><a href="{{url('/')}}">Trang chủ</a></li>
+							<li class="{{$arr[0]=='about'?'current':''}}" class="with_ul">
+								<a href="{{url('/about')}}">Giới thiệu</a>
 							</li>
-							<li><a href="{{url('/collection')}}">Thư viện</a></li>
-							<li><a href="index-3.html">Giá vé</a></li>
-							<li><a href="{{url('/post')}}">Bài viết</a></li>
-							<li><a href="{{url('/contact')}}">Liên hệ</a></li>
+							<li class="{{$arr[0]=='collection'?'current':''}}"><a href="{{url('/collection')}}">Thư viện</a></li>
+							<li class="{{$arr[0]=='ticket'?'current':''}}"><a href="{{url('/ticket')}}">Giá vé</a></li>
+							<li class="{{$arr[0]=='post'?'current':''}}"><a href="{{url('/post')}}">Bài viết</a></li>
+							<li class="{{$arr[0]=='contact'?'current':''}}"><a href="{{url('/contact')}}">Liên hệ</a></li>
 						</ul>
 					</nav>
 					<div class="clear"></div>
@@ -106,7 +113,7 @@
 					</ul>
 				</div>
 				<div class="grid_2">
-					<h4>Contact Us:</h4>
+					<h4>Liên hệ với chúng tôi:</h4>
 					TEL: 1-800-234-5678<br><a href="#">info@demolink.org</a>
 				</div>
 				<div class="clear"></div>
@@ -124,7 +131,7 @@
 						<a href="#"></a>
 					</div>
 					<div class="copy">
-						Journey &copy; 2013 | <a href="#">Privacy Policy</a> | Website designed by <a href="#" rel="nofollow">TemplateMonster.com</a>
+						Lê Trung Dũng &copy; 2016 | Thực tập tốt nghiệp
 					</div>
 				</div>
 				<div class="clear"></div>

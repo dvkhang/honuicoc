@@ -8,8 +8,8 @@
 			<h3>Bài viết mới nhất</h3>
 			@foreach($posts as $post)
 			<div class="blog">
-				<time datetime="{{$post->updated_at}}">23<br>
-				APR</time>
+				<time datetime="{{$post->updated_at}}">{{$post->updated_at}}<br>
+				</time>
 				<div class="extra_wrapper">
 					<div class="text1 upp">{{$post->title}} </div>
 				</div>
@@ -28,7 +28,21 @@
 				</div>
 			</div>
 			@endforeach()
-			
+			<div class="text-center">
+				<ul class="pagination" >
+					@if($posts->currentPage() != 1)
+						<li><a href="{{$posts->previousPageUrl()}}">Trang trước</i></a></li>
+					@endif
+					@if($posts->lastPage()>1)
+						@for($i=1; $i<=$posts->lastPage(); $i++)
+							<li class="{{$posts->currentPage()==$i?'active':''}}"><a href="{{$posts->url($i)}}">{{$i}}</a></li>
+						@endfor
+					@endif
+					@if($posts->lastPage() != $posts->currentPage())
+						<li><a href="{{$posts->nextPageUrl()}}">Trang sau</i></a></li>
+					@endif
+				</ul>
+			</div>
 		</div>
 		<div class="grid_3">
 			<h3>Danh mục</h3>

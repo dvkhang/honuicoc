@@ -14,7 +14,7 @@
     
       <div class="gallery">
         @foreach($collection->getMedia() as $image)
-          <div class="grid_4">
+          <div class="grid_4" style="padding-bottom: 15px;">
             <a href="{{asset($image->getUrl())}}" class="gal img_inner"><img src="{{asset($image->getUrl())}}" alt=""></a>
           </div>
         @endforeach

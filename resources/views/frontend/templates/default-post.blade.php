@@ -209,7 +209,7 @@
 				<div class="row">
 
 					<div class="col-md-6 copyright">
-						Your Company, LTD<br />
+						Lê Trung Dũng<br />
 						2014 &copy; All Rights Reserved.
 					</div>
 

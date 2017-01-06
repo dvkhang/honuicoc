@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	$('.delete-category').on('click', function(event) {
-		var r = confirm("Are you sure delete category ?");
+		var r = confirm("Bạn có chắc chắn muốn xóa không ?");
 		if (r == false) {
 			return false;
 		}

@@ -16,6 +16,7 @@ class CreateCollectionsTable extends Migration
         Schema::create('collections', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

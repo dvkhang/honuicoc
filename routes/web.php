@@ -11,9 +11,9 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('pages.template');
-//});
+// Route::get('/', function () {
+//    return view('frontend.templates.default');
+// });
 
 Auth::routes();
 
@@ -23,6 +23,12 @@ Route::get('category/{id}', 'HomeController@category');
 Route::get('post/{id}', 'HomeController@post');
 
 Route::get('post', 'HomeController@allPost');
+
+Route::get('contact', 'HomeController@contact');
+
+Route::get('about', 'HomeController@about');
+Route::get('collection', 'HomeController@collection');
+
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
@@ -60,6 +66,24 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::get('/delete-image/{id}', 'PostController@deleteImage');
 
         Route::get('/edit-status/{id}', 'PostController@editStatus');
+    });
+
+
+    Route::group(['prefix' => 'collection'], function () {
+
+        Route::get('/add', 'CollectionController@getAdd');
+        Route::post('/add', 'CollectionController@postAdd');
+
+        Route::get('/list', 'CollectionController@getList');
+        
+        Route::get('/edit/{id}', 'CollectionController@getEdit');
+        Route::post('/edit/{id}', 'CollectionController@postEdit');
+
+        Route::get('/delete', 'CollectionController@delete');
+
+        Route::get('/edit-status/{id}', 'CollectionController@editStatus');
+
+
     });
 
 

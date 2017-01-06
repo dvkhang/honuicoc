@@ -325,6 +325,21 @@
                         </li>
                     </ul>
                 </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">swap_calls</i>
+                        <span>Thư viện ảnh</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="{{asset('admin/collection/list')}}">Danh sách</a>
+                        </li>
+                        <li>
+                            <a href="{{asset('admin/collection/add')}}">Thêm thư viện</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <!-- #Menu -->

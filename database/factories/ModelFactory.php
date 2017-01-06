@@ -49,3 +49,11 @@ $factory->define(App\Ticket::class, function (Faker\Generator $faker) {
         'price' => rand(1, 5),
     ];
 });
+
+$factory->define(App\Collection::class, function (Faker\Generator $faker) {
+
+    return [
+        'title' => $faker->name,
+        'status' => 1,
+    ];
+});

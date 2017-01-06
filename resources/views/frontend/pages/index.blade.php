@@ -1,244 +1,163 @@
 @extends('frontend.templates.default')
 @section('content')
 
-<!-- WORK -->
-<section id="work" class="alternate arrow-down">
-    <div class="container">
-        <header class="text-center">
-            <h1>Chào mừng tới Hồ Núi Cốc</h1>
-        </header>
-
-        <div class="divider"><!-- lines divider --></div>
-
-        <article>
-            <center><b><h4>Nơi tìm kiếm niềm vui trọn vẹn</h4></b></center>
-            <p>
-                Hồ Núi Cốc là một hồ nước nhân tạo được, đây là địa điểm được nhiều du khách lựa chọn cho kỳ nghĩ cuối tuần, hoặc những chuyến dã ngoại trong ngày. Hồ Núi Côc còn gắn liền với truyền thuyết về Chàng Cốc và nàng Công. Với cảnh quan thiên thiên hết sức tuyệt đẹp Hồ Núi Cốc được ví như một ”Hạ Long” thu nhỏ của Thái Nguyên.
-            </p>
-        </article>
-
-        <div id="portfolio" class="text-center animate_fade_in">
-
-            <!-- PORTFOLIO FILTER -->
-            <div class="text-center">
-                <ul class="nav nav-tabs bstrap-tabs isotope-filter" data-sort-id="isotope-list" data-option-key="filter">
-                    <li data-option-value="*" class="active"><a href="#">ALL</a></li>
-                    <li data-option-value=".image"><a href="#">IMAGES</a></li>
-                    <li data-option-value=".brand"><a href="#">BRANDING</a></li>
-                    <li data-option-value=".video"><a href="#">VIDEO</a></li>
-                </ul>
-            </div>
-            <!-- /PORTFOLIO FILTER -->
-
-
-            <div class="row">
-                <ul class="sort-destination isotope" data-sort-id="isotope-list">
-
-                    <li class="isotope-item col-sm-6 col-md-4 image"><!-- item -->
-                        <a class="popup-image" href="{{asset('frontend')}}/images/preview/slider/1.jpg">
-                            <img src="{{asset('frontend')}}/images/preview/content/portfolio/p1.jpg" class="img-responsive" alt="img" />
-                            <div class="caption">
-                                <i class="rounded fa fa-camera"></i>
-                                <h3>Văn Hóa</h3>
-                                <p>Image Popup</p>
+<div class="container_12">
+    <div class="grid_12">
+        <div class="slider-relative">
+            <div class="slider-block">
+                <div class="slider">
+                    <a href="#" class="prev"></a><a href="#" class="next"></a>
+                    <ul class="items">
+                        <li>
+                            <img src="{{asset('frontend')}}/images/slide.jpg" alt="">
+                            <div class="banner">
+                                <div>THERE ARE PLENTY OF PLACES</div>
+                                <br>
+                                <span> that are worth seeing</span>
                             </div>
-                        </a>
-                    </li>
-
-                    <li class="isotope-item col-sm-6 col-md-4 video"><!-- item -->
-                        <a class="popup-video" href="https://www.youtube.com/watch?v=70833flifmo">
-                            <img src="{{asset('frontend')}}/images/preview/content/portfolio/p2.jpg" class="img-responsive" alt="img" />
-                            <div class="caption">
-                                <i class="rounded fa fa-film"></i>
-                                <h3>Sinh Thái</h3>
-                                <p>Youtube Video</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="isotope-item col-sm-6 col-md-4 video brand"><!-- item -->
-                        <a class="popup-video" href="https://www.youtube.com/watch?v=70833flifmo">
-                            <img src="{{asset('frontend')}}/images/preview/content/portfolio/p3.jpg" class="img-responsive" alt="img" />
-                            <div class="caption">
-                                <i class="rounded fa fa-film"></i>
-                                <h3>Giải Trí</h3>
-                                <p>Vimeo Video</p>
-                            </div>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- /WORK -->
-
-
-
-<section id="services" class="util-row">
-    <div class="container text-center">
-
-        <header class="text-center">
-            <h1>GIÁ VÉ</h1>
-        </header>
-
-        <div class="row">
-            @foreach($tickets as $ticket)
-                <div class="col-lg-4">
-                    @if($ticket->getMedia()->isEmpty()== false)
-                        <img src="{{asset($ticket->getMedia()[0]->getUrl())}}" height="120" width="120" alt="">
-                    @endif
-                    <p>{{$ticket->classify}}</p>
-                    <h2>{{$ticket->price}} VNĐ</h2>
-                    
+                        </li>
+                        <li><img src="{{asset('frontend')}}/images/slide1.jpg" alt=""></li>
+                        <li><img src="{{asset('frontend')}}/images/slide2.jpg" alt=""></li>
+                        <li><img src="{{asset('frontend')}}/images/slide3.jpg" alt=""></li>
+                    </ul>
                 </div>
-            @endforeach    
+            </div>
         </div>
     </div>
-</section>
+</div>
 
 
-<!-- BLOG -->
-<section id="quick-blog" class="alternate">
-    <div class="container">
-
-        <header class="text-center">
-            <h1>Bài đăng</h1>
-            <p>Bài viết gần đây</p>
-        </header>
-
-        <div class="divider"><!-- lines divider --></div>
-
-        <article>
-            <div class="row animate_fade_in">
-
-                <!-- article -->
-                @if($posts->isEmpty()== false)
+<!--=======content================================-->
+<div class="content">
+    <div class="ic">More Website Templates @ TemplateMonster.com - August 05, 2013!</div>
+    <div class="container_12">
+        <div class="grid_12">
+            <h3>Top Destinations</h3>
+        </div>
+        <div class="boxes">
+            <div class="grid_4">
+                <figure>
+                    <div><img src="{{asset('frontend')}}/images/page1_img1.jpg" alt=""></div>
+                    <figcaption>
+                        <h3>Venice</h3>
+                        Lorem ipsum dolor site geril amet, consectetur cing eliti. Suspendisse nulla leo mew dignissim eu velite a rew qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat. Rabi tur oliti aliquam bibendum olor quis malesuadivamu.
+                        <a href="" class="btn">Details</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="grid_4">
+                <figure>
+                    <div><img src="{{asset('frontend')}}/images/page1_img2.jpg" alt=""></div>
+                    <figcaption>
+                        <h3>New York</h3>
+                        Psum dolor sit ametylo gerto consectetur ertori hykill holit adipiscing lity. Donecto rtopil osueremo   kollit asec emmodem geteq tiloli. Aliquam dapibus neclol nami wertoli elittro eget vulpoli no
+                        utaterbil congue turpis in su.
+                        <a href="" class="btn">Details</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="grid_4">
+                <figure>
+                    <div><img src="{{asset('frontend')}}/images/page1_img3.jpg" alt=""></div>
+                    <figcaption>
+                        <h3>Paris</h3>
+                        Lorem ipsum dolor site geril amet, consectetur cing eliti. Suspendisse nulla leo mew dignissim eu velite a rew qw vehicula lacinia arcufasec ro. Aenean lacinia ucibusy fase tortor ut feugiat. Rabi tur oliti aliquam bibendum olor quis malesuadivamu.
+                        <a href="" class="btn">Details</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="grid_8">
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Bài viết mới nhất</a></li>
+                    <li><a href="#tabs-2">hot Deals</a></li>
+                    <li><a href="#tabs-3">All-Inclusive</a></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="tab_cont" id="tabs-1">
                     @foreach($posts as $post)
-                    <div class="col-md-4 quick-hover">
-                        <div class="quick-item">
-                            <figure class="media-preview"><!-- image -->
-                                <img src="{{asset('frontend')}}/images/1x1.png" class="img-responsive" data-src="holder.js/360x200/#676767:#555555/auto/" alt="img" />
-                            </figure>
-                            <h4>{{$post->title}}</h4>
-                            <p>{{the_excerpt($post->summary)}}</p>
-                            <a href="{{url('post', ['id'=>$post->id])}}" class="btn btn-xs"><i class="fa fa-sign-out"></i> Xem thêm</a>
+                        <img src="{{asset('frontend')}}/images/page1_img4.jpg" alt="">
+                        <div class="extra_wrapper">
+                            <div class="text1">{{$post->title}}. </div>
+                            
+                            {{$post->summary}}
+                            <a href="{{url('post', ['id'=>$post->id])}}" class="btn">Xem chi tiết</a>
+                            <div class="clear "></div>
                         </div>
-                    </div>
+                        <div class="clear cl1"></div>
                     @endforeach
-                @endif
+                </div>
+
+                <div class="tab_cont" id="tabs-2">
+                    <img src="{{asset('frontend')}}/images/page1_img4.jpg" alt="">
+                    <div class="extra_wrapper">
+                        <div class="text1">Rem psum dr sit amet. </div>
+                        <p class="style1">Nulla facilisi. Ut ut tincidunt lacus, ut auctor libero. Duis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisiestibulum eutro.</p>
+                        Nulla facilisi. Ut ut tincidunt lacus, ut auctor libero. Duis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisiestibulum eutro.
+                        <a href="#" class="btn">Details</a>
+                        <div class="clear "></div>
+                    </div>
+                    <div class="clear cl1"></div>
+                    <img src="{{asset('frontend')}}/images/page1_img5.jpg" alt="">
+                    <div class="extra_wrapper">
+                        <div class="text1 tx1">Hem psuf abr sit dmety. </div>
+                        Julla facilisi. Ut ut tincidunt lacus, ut auctor libero. Fuis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisi. Vestibulum eu eleifend metus, ut ornare nibh. Vestibulumul tincidunt interdum libero vitae faucibus. Gonec dapibus feugiate auctor. In ac dapibus lacus. Maecenas in pharetra mim asellus a sagittis dui, eu adipiscinget nisi. 
+                        <div class="clear"></div>
+                        <a href="#" class="btn bt1">Details</a>
+                        <div class="clear "></div>
+                    </div>
+                </div>
+                <div class="tab_cont" id="tabs-3">
+                    <img src="{{asset('frontend')}}/images/page1_img4.jpg" alt="">
+                    <div class="extra_wrapper">
+                        <div class="text1">Rem psum dr sit amet. </div>
+                        <p class="style1">Nulla facilisi. Ut ut tincidunt lacus, ut auctor libero. Duis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisiestibulum eutro.</p>
+                        Nulla facilisi. Ut ut tincidunt lacus, ut auctor libero. Duis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisiestibulum eutro.
+                        <a href="#" class="btn">Details</a>
+                        <div class="clear "></div>
+                    </div>
+                    <div class="clear cl1"></div>
+                    <img src="{{asset('frontend')}}/images/page1_img5.jpg" alt="">
+                    <div class="extra_wrapper">
+                        <div class="text1 tx1">Hem psuf abr sit dmety. </div>
+                        Julla facilisi. Ut ut tincidunt lacus, ut auctor libero. Fuis ommodo vel ipsum sed volutpat. Phasellus a sagittis dui, eu adipiscinget nisi. Vestibulum eu eleifend metus, ut ornare nibh. Vestibulumul tincidunt interdum libero vitae faucibus. Gonec dapibus feugiate auctor. In ac dapibus lacus. Maecenas in pharetra mim asellus a sagittis dui, eu adipiscinget nisi. 
+                        <div class="clear"></div>
+                        <a href="#" class="btn bt1">Details</a>
+                        <div class="clear "></div>
+                    </div>
+                </div>
             </div>
-        </article>
-
-        <div class="divider"><!-- lines divider --></div>
-
-        <article class="text-center" data-animation="bounceIn">
-            <a href="{{url('post')}}" class="plusNav" title="more from blog">+</a>
-        </article>
-
-    </div>
-</section>
-<!-- /BLOG -->
-
-<!-- ABOUT -->
-<section id="about" class="util-row">
-    <div class="container">
-        <header class="text-center">
-            <h1>LIÊN HỆ VỚI CHÚNG TÔI</h1>
-        </header>
-
-        <div class="divider"><!-- lines divider --></div>
-
-        <article class="text-center big-paragraph">
-            <p>BAN QUẢN LÝ KHU DU LỊCH VÙNG HỒ NÚI CỐC</p>
-        </article>
-            <div class="row text-left">
-
-                <!-- Passion -->
-                <div class="col-md-4">
-                    <h3>Phạm Đức Toàn</h3>
-                    <p>Trưởng ban</p>
-                    <P>ĐTDĐ: 0912.477.999</P>
-                    <P>
-                        ĐTCQ: 0280.3825.782
-                    </P>
-                    <P>
-                        Email: toanpd@thainguyen.gov.vn
-                    </P>
-                </div>
-
-
-                <!-- Precision -->
-                <div class="col-md-4">
-                    <h3>Nguyễn Văn Chiến</h3>
-                    <p>Trưởng phòng HC - TH</p>
-                    <P>ĐTDĐ: 0913.386.107</P>
-                    <P>
-                        ĐTCQ: 0280.3825.868
-                    </P>
-                    <P>
-                        Email:  chiennv.bqlhnc.@gmail.com
-                    </P>
-                </div>
-
-
-                <!-- Precision -->
-                <div class="col-md-4">
-                    <h3>Nguyễn Thị Thanh Tâm: </h3>
-                    <p>Trưởng phòng KH - NVDL</p>
-                    <P>ĐTDĐ: 0915.176.777</P>
-                    <P>
-                        ĐTCQ: 0280.3825.868
-                    </P>
-                    <P>
-                        Email:   lamnguyenthe.tn@gmail.com
-                    </P>
-                </div>
-
+        </div>
+        <div class="grid_4">
+            <div class="newsletter_title">NewsLetter </div>
+            <div class="n_container">
+                <form id="newsletter">
+                    <div class="success">Your subscribe request has been sent!</div>
+                    <div class="text1">Sign up to receive our newsletters </div>
+                    <label class="email">
+                    <input type="email" value="email address" >
+                    <span class="error">*This is not a valid email address.</span>
+                    </label> 
+                    <div class="clear"></div>
+                    <a href="#" class="" data-type="submit"></a> 
+                </form>
+                <ul class="list">
+                    <li><a href="#">Fgo psu dr sit amek </a></li>
+                    <li><a href="#">Sem psum dr sit ametre </a></li>
+                    <li><a href="#">Rame sum dr sit ame </a></li>
+                    <li><a href="#">Bem psum dr sit ameteko </a></li>
+                    <li><a href="#">Nem dsum dr sit amewas </a></li>
+                    <li><a href="#">Vcem psum dr sit </a></li>
+                    <li><a href="#">Zdfem psum dr sittr amewe </a></li>
+                </ul>
             </div>
-        </article>
-
-        <!-- curriculum vitae button  -->
-        <!--
-            <article class="curriculum-vitae text-center">
-                <a href="#" class="plusNav">+</a> 
-                <p>curriculum vitae</p>
-            </article>
-        -->
-
+        </div>
+        <div class="clear"></div>
     </div>
-</section>
-<!-- /ABOUT -->
+</div>
 
 
-
-
-
-<!-- GOOGLE MAP -->
-<section id="googleMap" class="noindicator nomargin nopadding">
-    <div class="container">
-        <address class="animate_fade_in">
-            <strong class="font-dosis fsize20">Địa chỉ liên hệ</strong>
-            <ul>
-                <li class="address-sprite address">
-                    Tên cơ quan: Ban quản lý khu du lịch vùng Hồ Núi Cốc<br />
-                    Địa chỉ: Tân Thái - Đại Từ - Thái Nguyên<br />
-                    <br />
-                </li>
-                <li class="address-sprite phone">
-                    Điện thoại văn thư: 0280.3825.868 <br/>
-                </li>
-                <li class="address-sprite email">
-                    toanpd@thainguyen.gov.vn
-                </li>
-            </ul>
-        </address>
-    </div>
-    <div id="gmap"></div>
-</section>
-<!-- GOOGLE MAP -->
 
 @endsection

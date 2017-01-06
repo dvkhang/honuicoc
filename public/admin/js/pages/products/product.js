@@ -53,6 +53,32 @@ $(document).ready(function() {
         });
         
 	});
+	$('.show-modal').on('click', function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		var url = $(this).attr('url');
+
+		$.ajax({
+			url: url,
+			type: 'GET',
+		})
+		.done(function(data) {
+			console.log(data);
+			$('#largeModalLabel').text(data.title);
+			$('#category').text('Danh mục : '+data.category.name);
+			$('#summary').text(data.summary);
+			$('#content').html(data.description);
+
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+		
+
+	});
 
 
 

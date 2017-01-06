@@ -24,9 +24,8 @@
                             <th>Hình ảnh</th>
                             <th>Tiêu đề</th>
                             <th>Danh mục</th>
-                            <th>Tóm tắt</th>
-                            <th>Nội Dung</th>
-                            <th>Status</th>
+                            <th width="40%">Tóm tắt</th>
+                            <th >Status</th>
                             <th width="7%">Action</th>
                         </tr>
                         </thead>
@@ -37,7 +36,6 @@
                             <th>Tiêu đề</th>
                             <th>Danh mục</th>
                             <th>Tóm tắt</th>
-                            <th>Nội Dung</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -55,8 +53,7 @@
                                     <td>{{$post->title}}</td>
                                     <td>{{\App\Category::find($post->category_id)->name}}</td>
                                     <td>{{$post->summary}}</td>
-                                    <td>{!! $post->description !!}</td>
-                                    <td>
+                                    <td> 
                                         <select name="status" class="edit-status" id="09">
                                             <option href="{{url('admin/post/edit-status', ['id'=>$post->id])}}" value="0" {{$post->status == 0? 'selected':''}}>Un publish</option>
                                             <option href="{{url('admin/post/edit-status', ['id'=>$post->id])}}" value="1" {{$post->status == 1? 'selected':''}}>Live</option>
@@ -64,6 +61,8 @@
                                         </select>
                                     </td>
                                     <td>
+                                        <a data-toggle="modal" class="show-modal" data-target="#largeModal" url="{{url('admin/post/detail', ['id'=>$post->id])}}">Chi tiết</a>
+
                                         <a href="{{url('admin/post/edit', ['id'=>$post->id])}}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">edit</i> <span class="icon-name"></span></span></a>
                                         <a href="#" id="{{$post->id}}" class="delete-product" product-id="{{$post->id}}" data-token="{{ csrf_token() }}"><span class="demo-google-material-icon"> <i class="material-icons" style="font-size: 20px;">delete_forever</i> <span class="icon-name"></span></span></a>
                                     </td>
@@ -76,7 +75,27 @@
         </div>
     </div>
 
-
+<div class="modal fade" id="largeModal"  tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h4 class="modal-title" id="largeModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <p id="category"></p>
+                <p>Tóm tăt: </p>
+                <p id="summary"></p>
+                <p>Nội dung : </p>
+                <div id="content">
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
 @stop
 
 @section('footer')

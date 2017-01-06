@@ -38,7 +38,9 @@ class PostController extends Controller
 
     public function getDetail($id){
         $post = Post::findOrFail($id);
-        return view('admin.posts.detail', compact('post'));
+        $post->category;
+        return $post;
+        // return view('admin.posts.detail', compact('post'));
     }
 
     public function getEdit($id){

@@ -49,6 +49,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::post('/add', 'PostController@postAdd');
 
         Route::get('/list', 'PostController@getList');
+        
         Route::get('/detail/{id}', 'PostController@getDetail');
 
         Route::get('/edit/{id}', 'PostController@getEdit');

@@ -1,4 +1,4 @@
-@extends('frontend.templates.default')
+@extends('frontend.templates.default',['title'=>'Liên hệ'])
 @section('content')
 
 <div class="content">

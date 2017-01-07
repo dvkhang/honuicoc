@@ -1,6 +1,13 @@
-@extends('frontend.templates.default')
+@extends('frontend.templates.default',['title'=>'Bài viết '.$post->title])
 @section('content')
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=251181661908172";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="content">
 	<div class="ic">Hồ Núi Cốc</div>
 	<div class="container_12">
@@ -11,8 +18,6 @@
 				APR</time>
 				@if($post->getMedia()->isEmpty()==false)
 					<img src="{{asset($post->getMedia()[0]->getUrl())}}">
-				@else
-					<img src="{{asset('frontend')}}/images/page5_img1.jpg" >
 				@endif
 				<div class="clear"></div>
 				
@@ -21,10 +26,11 @@
 					<p class="text1">{!! html_entity_decode($post->description) !!}</p>
 				</div>
 			</div>
-			
+			<div class="fb-comments" data-href="http://localhost:8000/post/{{$post->id}}" data-width="700" data-numposts="5"></div>
 
 			
 		</div>
+
 		<div class="grid_3">
 			<h3>Danh mục</h3>
 			<ul class="list2 l1">

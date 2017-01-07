@@ -1,4 +1,4 @@
-@extends('frontend.templates.default')
+@extends('frontend.templates.default',['title'=>'Giới thiệu khu du lịch hồ núi cốc'])
 @section('content')
 
 <div class="content container">

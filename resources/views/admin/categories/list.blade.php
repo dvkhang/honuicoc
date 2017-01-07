@@ -1,4 +1,4 @@
-@extends('admin.templates.default', ['title'=>'List Category',
+@extends('admin.templates.default', ['title'=>'Danh sách danh mục',
             'libs_elements'=>['node-waves', 'animate',  'dataTables'],
             'customs_css'=>[],
             'custom_scripts'=>[
@@ -16,24 +16,24 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                List Category
+                               Danh sách danh mục
                             </h2>
                         </div>
                         <div class="body">
                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                 <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Creat at</th>
-                                    <th>Option</th>
+                                    <th>Tên </th>
+                                    <th>Ngày tạo</th>
+                                    <th>Tùy chọn</th>
                                 </tr>
                                 </thead>
 
                                 <tfoot>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Creat at</th>
-                                    <th>Option</th>
+                                    <th>Tên </th>
+                                    <th>Ngày tạo</th>
+                                    <th>Tùy chọn</th>
                                 </tr>
                                 </tfoot>
 
@@ -46,10 +46,10 @@
                                             <td>{{$category->updated_at}}</td>
                                             <td>
                                                 <a href="edit/{{$category->id}}">
-                                                    <button type="button" class="btn btn-primary btn-lg">Edit</button>
+                                                    <button type="button" class="btn btn-primary btn-lg">Sửa</button>
                                                 </a>
                                                 <a href="#" id="{{$category->id}}" class="delete-category" category-id="{{$category->id}}" data-token="{{ csrf_token() }}">
-                                                    <button type="button" class="btn btn-primary btn-lg">Delete</button>
+                                                    <button type="button" class="btn btn-primary btn-lg">Xóa</button>
                                                 </a>
                                                 
                                             </td>

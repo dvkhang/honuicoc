@@ -1,4 +1,4 @@
-@extends('frontend.templates.default')
+@extends('frontend.templates.default',['title'=>'Trang chủ'])
 @section('content')
 
 <div class="container_12">
@@ -42,7 +42,7 @@
             <div class="grid_4">
                 <figure>
                 @if($collection->getMedia()->isEmpty()==false)
-                    <div><img src="{{asset($collection->getMedia()[0]->getUrl())}}" alt=""></div>
+                    <div><img src="{{asset($collection->getMedia()[0]->getUrl())}}" alt="" width="360" height="380"></div>
                     @else
                     <div><img src="{{asset('frontend')}}/images/page1_img1.jpg" alt=""></div>
                 @endif    

@@ -1,4 +1,4 @@
-@extends('admin.templates.default', ['title'=>'Add category',
+@extends('admin.templates.default', ['title'=>'Thêm Danh Mục',
     'libs_elements'=>['node-waves', 'animate', 'bootstrap-select',  'jquery-slimscroll'],
     'customs_css'=>[],
     'custom_scripts'=>[
@@ -13,7 +13,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Add Category</h2>
+                            <h2>Thêm Danh Mục</h2>
                         </div>
                         <div class="body">
                             <form id="form_validation" method="POST" action="{{url('admin/category/add')}}">
@@ -21,10 +21,10 @@
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" class="form-control" name="name" required>
-                                        <label class="form-label">Category Name</label>
+                                        <label class="form-label">Tên Danh Mục</label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+                                <button class="btn btn-primary waves-effect" type="submit">Thêm</button>
                             </form>
                         </div>
                     </div>

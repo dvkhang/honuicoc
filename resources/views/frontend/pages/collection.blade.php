@@ -1,4 +1,4 @@
-@extends('frontend.templates.default')
+@extends('frontend.templates.default',['title'=>'Bộ sưu tập'])
 @section('content')
 
 <div class="content"><div class="ic">Hồ Núi Cốc</div>
@@ -15,7 +15,7 @@
       <div class="gallery">
         @foreach($collection->getMedia() as $image)
           <div class="grid_4" style="padding-bottom: 15px;">
-            <a href="{{asset($image->getUrl())}}" class="gal img_inner"><img src="{{asset($image->getUrl())}}" alt=""></a>
+            <a href="{{asset($image->getUrl())}}" class="gal img_inner"><img src="{{asset($image->getUrl())}}" width="360" height="257"></a>
           </div>
         @endforeach
       </div>

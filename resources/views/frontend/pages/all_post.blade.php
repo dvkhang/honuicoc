@@ -1,4 +1,4 @@
-@extends('frontend.templates.default')
+@extends('frontend.templates.default',['title'=>'Danh sách các bài đăng'])
 @section('content')
 
 <div class="content">

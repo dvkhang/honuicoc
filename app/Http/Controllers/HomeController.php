@@ -22,7 +22,9 @@ class HomeController extends Controller
 
     public function dashboard()
     {
-        return view('admin.index');
+        $post =  Post::count();
+        $collection = Collection::count();
+        return view('admin.index', compact('post', 'collection'));
     }
 
     /**

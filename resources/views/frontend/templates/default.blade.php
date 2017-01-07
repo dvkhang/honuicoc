@@ -95,22 +95,22 @@
 		<div class="bottom_block">
 			<div class="container_12">
 				<div class="grid_2 prefix_2">
-					<ul>
+					{{-- <ul>
 						<li><a href="#">FAQS Page</a></li>
 						<li><a href="#">People Say</a></li>
-					</ul>
+					</ul> --}}
 				</div>
 				<div class="grid_2">
-					<ul>
+					{{-- <ul>
 						<li><a href="#">Useful links</a></li>
 						<li><a href="#">Partners</a></li>
-					</ul>
+					</ul> --}}
 				</div>
 				<div class="grid_2">
-					<ul>
+					{{-- <ul>
 						<li><a href="#">Insurance</a></li>
 						<li><a href="#">Family Travel</a></li>
-					</ul>
+					</ul> --}}
 				</div>
 				<div class="grid_2">
 					<h4>Liên hệ với chúng tôi:</h4>

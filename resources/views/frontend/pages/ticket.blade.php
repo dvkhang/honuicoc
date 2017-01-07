@@ -7,7 +7,7 @@
 		<div class="col-lg-4">
 			
 			@if($ticket->getMedia()->isEmpty()==false)
-					<img src="{{asset($post->getMedia()[0]->getUrl())}}">
+					<img src="{{asset($ticket->getMedia()[0]->getUrl())}}">
 				@else
 					<img src="{{asset('frontend')}}/images/page5_img1.jpg" >
 				@endif

@@ -7,6 +7,8 @@ use App\Post;
 use App\Ticket;
 use App\Collection;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use RocketCode\Shopify\API;
 
 class HomeController extends Controller
 {
@@ -96,6 +98,29 @@ class HomeController extends Controller
         $tickets = Ticket::all();
         return view('frontend.pages.ticket', compact('tickets'));
 
+    }
+    public function invite(){
+        return view('frontend.pages.invite');
+    }
+
+    public function instagram(){
+        $shopify =App::make('ShopifyAPI', [
+            'API_KEY' => 'a7d11e7a151813101e0dbd1b358378c2',
+            'API_SECRET' => '4bf92d650d9d5226f5d892d35b25316b',
+            'SHOP_DOMAIN' => 'https://cutetoro-com.myshopify.com',
+            'ACCESS_TOKEN' => 'e164882f4d8b5e39ea7142104011fd77-1487666830'
+        ]);
+
+        // Gets a list of products
+        $result = $shopify->call([
+            'METHOD'     => 'GET',
+            'URL'         => '/admin/products.json?page=1'
+        ]);
+
+        $products = $result->products;
+        dd('f');
+        var_dump($products);
+        // Print out the title of each product we received
     }
     
     

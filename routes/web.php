@@ -1,5 +1,6 @@
 <?php
-
+use RocketCode\Shopify;
+use RocketCode\Shopify\API;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,7 @@ Route::get('about', 'HomeController@about');
 Route::get('collection', 'HomeController@collection');
 Route::get('ticket', 'HomeController@ticket');
 
+Route::get('invite', 'HomeController@invite');
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
@@ -111,4 +113,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::post('/upload-avatar', 'UserController@uploadAvatar');
     });
 
+
+
 });
+
+//////instagram
+Route::get('instagram1','HomeController@instagram');
